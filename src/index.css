@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ff5722;
+  --color-surface: #0A0A0A;
+  --color-on-surface: #FFFFFF;
+  --color-border: #1A1A1A;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #7A7A7A;
+
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-headline: "IBM Plex Sans", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-label: "IBM Plex Mono", monospace;
+  --font-brand: "Space Grotesk", sans-serif;
+
+  --radius-none: 0px;
+  --radius-DEFAULT: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-full: 0px;
+}
+
+body {
+  background-color: #080808;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: #353535; }
+::-webkit-scrollbar-thumb:hover { background: #ff5722; }
+
+/* Utilities */
+.mono-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.tactical-border {
+  border: 0.5px solid rgba(53, 53, 53, 0.4);
+}
+.bg-data-overlay {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAG8Rhu143UGLfmvhOOIzzPGweESjSlaLPIW7rcuE1hXUviwn7NmM1SUh1FhXwPF09irGVhfp2dyNU3ZHiqcXXncOYFwPrDDS-j1ZIjQyD-QPWoJnx5NoFheN-bInlhsLUsA105yAOWp80-Rz87CxHcnQ5U6dUUo5Ku2kHdOhvehP-TNEhVqu_J-ThmjUM7IilR0MZiJUd3wdLmiymanlJDVycn5IrQwmgmR4bv8u6RQUeEdNamPgEjbTuQLwpZNkGxKDh91kdnfj9T');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  pointer-events: none;
+}
+.kinetic-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.grid-hairline {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.06) 0.5px, transparent 0.5px), linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+}
+.scan-line {
+  background: linear-gradient(to bottom, transparent 50%, rgba(255, 87, 34, 0.05) 50%);
+  background-size: 100% 4px;
+}
+.border-half {
+  border-width: 0.5px;
+  border-color: #353535;
+}
