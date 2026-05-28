@@ -10,14 +10,14 @@ export default function Helix() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 pt-[120px] pb-32">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-[80px] sm:pt-[120px] pb-16 sm:pb-32">
       {/* Header Section */}
       <div className="mb-24">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-12 h-px bg-[#C45E1A]"></div>
           <span className="font-mono text-[10px] text-[#C45E1A] tracking-widest uppercase">SOVEREIGN INTELLIGENCE // HELIX v1.0</span>
         </div>
-        <h1 className="text-7xl md:text-9xl font-sans font-bold text-[#FFFFFF] tracking-tighter mb-8 leading-none">HELIX</h1>
+        <h1 className="text-5xl sm:text-7xl md:text-9xl font-sans font-bold text-[#FFFFFF] tracking-tighter mb-8 leading-none">HELIX</h1>
         <div className="flex">
           <div className="w-1 bg-[#C45E1A] mr-6"></div>
           <p className="font-mono text-lg md:text-xl text-[#7A7A7A] uppercase tracking-widest max-w-2xl leading-relaxed">
@@ -87,7 +87,7 @@ export default function Helix() {
       {/* BLOCK_02 */}
       <div className="mb-24">
         <h2 className="font-mono text-[10px] text-[#C45E1A] tracking-widest uppercase mb-8">BLOCK_02 // ONTOLOGY_ENGINE</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-0 border border-[#1A1A1A] mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-0 border border-[#1A1A1A] mb-8">
           {/* Stage 1 */}
           <div className="p-6 border-b md:border-b-0 md:border-r border-[#1A1A1A] bg-[#0A0A0A]">
             <span className="font-mono text-[9px] text-[#7A7A7A] tracking-widest uppercase block mb-6">STAGE_L1</span>
@@ -222,7 +222,7 @@ export default function Helix() {
       {/* BLOCK_05 */}
       <div className="mb-32">
         <h2 className="font-mono text-[10px] text-[#C45E1A] tracking-widest uppercase mb-8">BLOCK_05 // WORKFLOW_&_ACTION_SURFACE</h2>
-        <p className="text-3xl md:text-4xl font-sans text-[#FFFFFF] leading-tight mb-16 max-w-4xl">
+        <p className="text-xl sm:text-3xl md:text-4xl font-sans text-[#FFFFFF] leading-tight mb-10 sm:mb-16 max-w-4xl">
           Analysts build custom dashboards with no-code drag-and-drop. Automated workflows trigger real-world actions — alerting a security advisor when a suspect's financial profile changes, or flagging border anomalies when multiple signals converge simultaneously.
         </p>
         <div className="flex flex-wrap gap-16">

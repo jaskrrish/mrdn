@@ -13,10 +13,10 @@ export default function Nexus() {
             <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-6">
               SYSTEM_PROTOCOL: NEXUS_V1.0
             </div>
-            <h1 className="text-7xl md:text-9xl font-bold tracking-tight leading-none mb-2">
+            <h1 className="text-4xl sm:text-6xl md:text-9xl font-bold tracking-tight leading-none mb-2">
               NEXUS
             </h1>
-            <h1 className="text-7xl md:text-9xl font-bold tracking-tight leading-none text-[#C45E1A]">
+            <h1 className="text-4xl sm:text-6xl md:text-9xl font-bold tracking-tight leading-none text-[#C45E1A]">
               INTELLIGENCE
             </h1>
             <div className="border-l-2 border-[#C45E1A] pl-6 mt-12">
@@ -249,7 +249,7 @@ export default function Nexus() {
             </p>
           </div>
           
-          <div className="lg:col-span-2 bg-[#C45E1A] text-[#000000] p-16 md:p-24 flex flex-col justify-center items-center text-center">
+          <div className="lg:col-span-2 bg-[#C45E1A] text-[#000000] p-8 sm:p-16 md:p-24 flex flex-col justify-center items-center text-center">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 uppercase">
               LIVE INTELLIGENCE. ZERO MANUAL CONFIGURATION.
             </h2>

@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function Mission() {
   return (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="p-8 max-w-3xl mx-auto pt-[120px] pb-24 min-h-screen">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="px-4 sm:p-8 max-w-3xl mx-auto pt-[80px] sm:pt-[120px] pb-24 min-h-screen">
       <header className="mb-16 border-b border-[#1A1A1A] pb-6">
         <h1 className="font-mono text-3xl text-[#FFFFFF] tracking-widest uppercase">Mission</h1>
         <p className="text-[#7A7A7A] mt-4 font-sans text-sm tracking-wide uppercase">Why MRDN exists.</p>

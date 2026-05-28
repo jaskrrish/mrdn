@@ -46,7 +46,7 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="p-8 max-w-2xl mx-auto pt-[120px] pb-24 min-h-screen flex flex-col items-center justify-center">
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="px-4 sm:p-8 max-w-2xl mx-auto pt-[80px] sm:pt-[120px] pb-24 min-h-screen flex flex-col items-center justify-center">
         <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-12 text-center w-full">
           <h2 className="font-mono text-xl text-[#FFFFFF] tracking-widest uppercase mb-4">Request Received</h2>
           <p className="text-[#7A7A7A] font-sans text-sm mb-8">DEPLOYMENT REQUEST RECEIVED. OUR ENGINEERING TEAM WILL REVIEW YOUR OPERATIONAL REQUIREMENTS.</p>
@@ -62,14 +62,14 @@ export default function Contact() {
   }
 
   return (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="p-8 max-w-2xl mx-auto pt-[120px] pb-24 min-h-screen">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="px-4 sm:p-8 max-w-2xl mx-auto pt-[80px] sm:pt-[120px] pb-24 min-h-screen">
       <header className="mb-12 border-b border-[#1A1A1A] pb-4">
         <h1 className="font-mono text-2xl text-[#FFFFFF] tracking-widest uppercase">Contact</h1>
         <p className="text-[#7A7A7A] mt-2 font-sans text-sm">MRDN is currently deploying in closed beta for government agencies and select enterprise design partners.</p>
       </header>
 
       <form className="space-y-6" onSubmit={handleSubmit}>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <div className="space-y-2">
             <label className="block font-mono text-[11px] text-[#7A7A7A] uppercase tracking-widest">Name</label>
             <input 

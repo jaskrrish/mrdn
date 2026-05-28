@@ -12,7 +12,7 @@ export default function Orion() {
               <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-4">
                 SYSTEM DESIGNATION // ORION-V1.0
               </div>
-              <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-4 uppercase">
+              <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight mb-4 uppercase">
                 Orion
               </h1>
               <div className="font-mono text-xs text-[#7A7A7A] tracking-[0.1em] uppercase">
@@ -36,7 +36,7 @@ export default function Orion() {
             </div>
           </div>
 
-          <div className="flex items-center justify-end h-full">
+          <div className="hidden sm:flex items-center justify-end h-full">
             <div className="flex gap-8 items-start relative">
               {/* Connecting lines */}
               <svg className="absolute inset-0 w-full h-full -z-10" style={{ pointerEvents: 'none' }}>

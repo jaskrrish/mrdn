@@ -16,8 +16,8 @@ export default function Intelligence() {
   const article = insights.find(i => i.id === selectedArticle);
 
   return (
-    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="p-8 max-w-4xl mx-auto pt-[80px] pb-24">
-      <header className="mb-12 border-b border-[#1A1A1A] pb-4 flex justify-between items-end">
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="px-4 sm:p-8 max-w-4xl mx-auto pt-[68px] sm:pt-[80px] pb-24">
+      <header className="mb-12 border-b border-[#1A1A1A] pb-4 flex flex-col sm:flex-row sm:justify-between sm:items-end gap-3">
         <div>
           <h1 className="font-mono text-2xl text-[#FFFFFF] tracking-widest uppercase">Intelligence</h1>
           <p className="text-[#7A7A7A] mt-2 font-sans text-sm">Live platform outputs. All intel synthesized autonomously by Orion.</p>

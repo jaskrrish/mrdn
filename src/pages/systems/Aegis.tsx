@@ -11,7 +11,7 @@ export default function Aegis() {
             <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-8">
               SYSTEM IDENTIFICATION: AEGIS-01
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight mb-6">
               Aegis.
             </h1>
             <p className="text-[#7A7A7A] text-sm md:text-base max-w-md leading-relaxed">
