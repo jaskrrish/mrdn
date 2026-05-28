@@ -10,7 +10,7 @@ export default function Orion() {
           <div className="flex flex-col gap-8">
             <div>
               <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-4">
-                SYSTEM DESIGNATION // ORION-V2
+                SYSTEM DESIGNATION // ORION-V1.0
               </div>
               <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-4 uppercase">
                 Orion
@@ -282,7 +282,7 @@ export default function Orion() {
               06 // OUR UNFAIR ADVANTAGE
             </div>
             <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
-              Palantir Apollo requires 6 to 8 months and 10 to 15 forward-deployed engineers per client. Orion targets 4 to 6 weeks with autonomous agents and zero on-site headcount. The cost structure this creates opens Meridian to mid-market Indian enterprises — clients Palantir structurally cannot serve at viable economics.
+              Palantir Apollo requires 6 to 8 months and 10 to 15 forward-deployed engineers per client. Orion targets 4 to 6 weeks with autonomous agents and one human review checkpoint — schema approval only. The cost structure this creates opens MRDN to mid-market Indian enterprises — clients Palantir structurally cannot serve at viable economics.
             </p>
           </div>
           
@@ -318,15 +318,13 @@ export default function Orion() {
             <div className="border border-[#C45E1A] px-4 py-1 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">ORION</div>
             <div className="text-[#333333] text-xs">&gt;</div>
             <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">AEGIS</div>
-            <div className="text-[#333333] text-xs">&gt;</div>
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">VANTAGE</div>
           </div>
         </div>
 
         {/* Footer Area */}
         <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-16 flex flex-col items-center justify-center text-center mt-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 uppercase tracking-tight">
-            ORION MAKES THE MERIDIAN STACK 4× FASTER TO DEPLOY.
+            ORION MAKES THE MRDN STACK 4× FASTER TO DEPLOY.
           </h2>
           <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase mb-8">
             AGENT-DRIVEN ONBOARDING. HUMAN REVIEW AT ONE CHECKPOINT ONLY.
@@ -338,7 +336,7 @@ export default function Orion() {
 
         <div className="flex justify-between items-center border-t border-[#1A1A1A] pt-6">
           <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">
-            © 2024 MERIDIAN PLATFORM // UNCLASSIFIED SYSTEM
+            © 2026 MRDN
           </div>
           <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase flex gap-4">
             <span>PRIVACY POLICY</span>

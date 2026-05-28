@@ -65,7 +65,7 @@ export default function Contact() {
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="p-8 max-w-2xl mx-auto pt-[120px] pb-24 min-h-screen">
       <header className="mb-12 border-b border-[#1A1A1A] pb-4">
         <h1 className="font-mono text-2xl text-[#FFFFFF] tracking-widest uppercase">Contact</h1>
-        <p className="text-[#7A7A7A] mt-2 font-sans text-sm">Meridian is currently deploying in closed beta for government agencies and select enterprise design partners.</p>
+        <p className="text-[#7A7A7A] mt-2 font-sans text-sm">MRDN is currently deploying in closed beta for government agencies and select enterprise design partners.</p>
       </header>
 
       <form className="space-y-6" onSubmit={handleSubmit}>

@@ -56,7 +56,7 @@ export default function Aegis() {
               WHAT AEGIS DOES
             </div>
             <p className="text-xl md:text-2xl leading-relaxed text-[#FFFFFF] max-w-2xl">
-              Aegis is the natural-language interface that sits on top of the entire Meridian stack. Any operator — a government analyst in Tamil Nadu, a plant supervisor in Rajasthan, a logistics manager in Punjab — can query their intelligence graph in their native language and receive structured, contextualised responses. No SQL. No technical training required.
+              Aegis is the natural-language interface that sits on top of the entire MRDN stack. Any operator — a government analyst in Tamil Nadu, a plant supervisor in Rajasthan, a logistics manager in Punjab — can query their intelligence graph in their native language and receive structured, contextualised responses. No SQL. No technical training required.
             </p>
           </div>
           
@@ -76,7 +76,7 @@ export default function Aegis() {
             </svg>
             
             <div className="font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase relative z-10">
-              MULTILINGUAL_INFERENCE_LAYER // BhAi_LLM_v2
+              MULTILINGUAL_INFERENCE_LAYER // BhAi_LLM_v1.0
             </div>
           </div>
         </div>
@@ -102,12 +102,7 @@ export default function Aegis() {
             
             <div className="flex justify-between items-center py-2 w-[85%]">
               <div className="font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase">
-                © 2024 MERIDIAN STRATEGIC. ALL RIGHTS RESERVED. CLASSIFIED_LEVEL_A
-              </div>
-              <div className="font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase flex gap-4">
-                <span>PRIVACY</span>
-                <span>PROTOCOL</span>
-                <span>SUPPORT</span>
+                © 2026 MRDN
               </div>
             </div>
             
@@ -258,8 +253,7 @@ export default function Aegis() {
                 </div>
                 <div className="font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase text-right leading-relaxed mt-1">
                   LATENCY: 0.002ms<br/>
-                  JITTER: 0.0001<br/>
-                  THROUGHPUT: 4.9PB/s
+                  JITTER: 0.0001
                 </div>
               </div>
               
@@ -341,15 +335,13 @@ export default function Aegis() {
             <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">ORION</div>
             <div className="h-[1px] bg-[#1A1A1A] flex-1 mx-4"></div>
             <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">AEGIS</div>
-            <div className="h-[1px] bg-[#1A1A1A] flex-1 mx-4"></div>
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">VANTAGE</div>
           </div>
         </div>
 
         {/* Footer Area */}
         <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-16 flex flex-col items-center justify-center text-center mt-8">
           <h2 className="text-3xl md:text-4xl font-medium text-[#FFFFFF] mb-8">
-            Aegis makes Meridian the only intelligence platform operable by any Indian — in any language.
+            Aegis makes MRDN the only intelligence platform operable by any Indian — in any language.
           </h2>
           <button className="bg-[#C45E1A] text-[#000000] font-mono text-[11px] tracking-[0.1em] uppercase px-8 py-4 hover:bg-[#A34A10] transition-colors">
             REQUEST ACCESS

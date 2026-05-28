@@ -17,10 +17,10 @@ export default function Systems() {
         <div className="flex flex-1 gap-6 py-6 overflow-hidden">
           <aside className="w-80 flex flex-col gap-8 shrink-0 relative h-full justify-center">
             <div className="flex flex-col gap-4">
-              <span className="font-mono text-[10px] text-[#ff5722] tracking-[0.2em] uppercase">Architecture v4.0</span>
+              <span className="font-mono text-[10px] text-[#ff5722] tracking-[0.2em] uppercase">Architecture v1.0</span>
               <h1 className="text-4xl font-sans font-normal tracking-tight text-[#FFFFFF] leading-none">SYSTEM<br/>TOPOLOGY</h1>
               <p className="text-[#7A7A7A] font-sans text-sm leading-relaxed">
-                Meridian is a four-module intelligence stack. Each module performs a distinct function — from autonomous data ingestion to multilingual AI — forming a unified operational intelligence platform built for India's sovereign environments.
+                MRDN is a four-module intelligence stack. Each module performs a distinct function — from autonomous data ingestion to multilingual AI — forming a unified operational intelligence platform built for India's sovereign environments.
               </p>
             </div>
             <div className="flex flex-col gap-6 mt-4 border-l border-[#1A1A1A] pl-6">

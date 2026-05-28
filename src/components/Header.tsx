@@ -27,7 +27,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-full px-8 w-full max-w-[1600px] mx-auto">
           <div className="flex-none w-[150px]">
             <Link to="/" className="font-mono text-[15px] font-bold tracking-[0.2em] text-[#FFFFFF] uppercase hover:text-[#ff5722] transition-colors">
-              MERIDIAN
+              MRDN
             </Link>
           </div>
           

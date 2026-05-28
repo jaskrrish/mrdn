@@ -15,7 +15,7 @@ export default function Helix() {
       <div className="mb-24">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-12 h-px bg-[#C45E1A]"></div>
-          <span className="font-mono text-[10px] text-[#C45E1A] tracking-widest uppercase">SOVEREIGN INTELLIGENCE // HELIX v4.0</span>
+          <span className="font-mono text-[10px] text-[#C45E1A] tracking-widest uppercase">SOVEREIGN INTELLIGENCE // HELIX v1.0</span>
         </div>
         <h1 className="text-7xl md:text-9xl font-sans font-bold text-[#FFFFFF] tracking-tighter mb-8 leading-none">HELIX</h1>
         <div className="flex">
@@ -82,14 +82,7 @@ export default function Helix() {
       </div>
 
       {/* Divider */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-t border-[#1A1A1A] pt-4 pb-24 font-mono text-[8px] text-[#7A7A7A] tracking-widest uppercase gap-4">
-        <span>©2024 ARCH-DATA CO.</span>
-        <div className="flex flex-wrap gap-8">
-          <span>SENSITIVE_DATA_HANDLING</span>
-          <span>RESTRICTED_ACCESS</span>
-          <span>SYSTEM_000</span>
-        </div>
-      </div>
+      <div className="pb-24"></div>
 
       {/* BLOCK_02 */}
       <div className="mb-24">

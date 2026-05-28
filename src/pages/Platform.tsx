@@ -1,6 +1,20 @@
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useState, useEffect, useRef } from 'react';
+import { AreaChart, Area, XAxis, ReferenceLine, ResponsiveContainer, Tooltip } from 'recharts';
+
+const indiaDataGrowth = [
+  { year: '2005', users: 50 },
+  { year: '2008', users: 80 },
+  { year: '2010', users: 100 },
+  { year: '2013', users: 213 },
+  { year: '2015', users: 354 },
+  { year: '2017', users: 450 },
+  { year: '2019', users: 627 },
+  { year: '2021', users: 759 },
+  { year: '2023', users: 870 },
+  { year: '2025', users: 900 },
+];
 
 export default function Platform() {
   const [hasPlayed, setHasPlayed] = useState(false);
@@ -51,7 +65,7 @@ export default function Platform() {
               animate={stage !== 'spin' ? { opacity: 1 } : { opacity: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              <p className="font-mono text-[10px] tracking-[0.3em] text-[#ff5722] uppercase">SYS-MERIDIAN / v4.2.0 // SOVEREIGN BUILD</p>
+              <p className="font-mono text-[10px] tracking-[0.3em] text-[#ff5722] uppercase">SYS-MRDN / v1.0 // SOVEREIGN BUILD</p>
               <div className="h-[1px] w-12 bg-[#ff5722]"></div>
             </motion.div>
             
@@ -67,14 +81,14 @@ export default function Platform() {
             <div className="relative mb-10">
               {/* First 2 lines always visible */}
               <p className="text-[#7A7A7A] font-sans text-base md:text-lg leading-relaxed">
-                Meridian integrates fragmented data streams across government ministries and enterprise operations into a unified intelligence graph — processed, structured, and acted upon in real time, entirely within Indian borders.
+                MRDN integrates fragmented data streams across government ministries and enterprise operations into a unified intelligence graph — processed, structured, and acted upon in real time, entirely within Indian borders.
               </p>
               {/* Rest fades in on scroll */}
               <motion.p 
                 style={{ opacity: paragraphOpacity }}
                 className="text-[#7A7A7A] font-sans text-base md:text-lg leading-relaxed mt-2"
               >
-                From national security to commercial operations — Meridian delivers the decision clarity that complex environments demand.
+                From national security to commercial operations — MRDN delivers the decision clarity that complex environments demand.
               </motion.p>
             </div>
             
@@ -189,7 +203,7 @@ export default function Platform() {
             >
               <p className="font-mono text-[8px] text-[#ff5722] mb-1">SYSTEM LOG // 22:14:09</p>
               <div className="space-y-1">
-                <p className="font-mono text-[8px] text-[#7A7A7A]">&gt; INIT MERIDIAN_v4.1</p>
+                <p className="font-mono text-[8px] text-[#7A7A7A]">&gt; INIT MRDN_v1.0</p>
                 <p className="font-mono text-[8px] text-[#7A7A7A]">&gt; CONNECTING NODES...</p>
                 <p className="font-mono text-[8px] text-[#7A7A7A]">&gt; MODULES_ONLINE: HELIX / NEXUS / ORION / AEGIS</p>
                 <p className="font-mono text-[8px] text-[#7A7A7A]">&gt; DATA_SOVEREIGNTY: CONFIRMED</p>
@@ -209,10 +223,10 @@ export default function Platform() {
       >
         <div className="flex-1 flex items-center px-6 md:px-12 gap-8 md:gap-12 overflow-x-auto no-scrollbar">
           {[
-            { id: '01', name: 'HELIX', sub: 'DATA FABRIC', path: '/systems/helix' },
-            { id: '02', name: 'NEXUS', sub: 'SEC PROTOCOL', path: '/systems/nexus' },
-            { id: '03', name: 'ORION', sub: 'INTEL LAYER', path: '/systems/orion' },
-            { id: '04', name: 'AEGIS', sub: 'SCHEDULER', path: '/systems/aegis' },
+            { id: '01', name: 'HELIX', sub: 'GOV INTELLIGENCE', path: '/systems/helix' },
+            { id: '02', name: 'NEXUS', sub: 'ENTERPRISE OPS', path: '/systems/nexus' },
+            { id: '03', name: 'ORION', sub: 'DATA INGESTION', path: '/systems/orion' },
+            { id: '04', name: 'AEGIS', sub: 'AI INTERFACE', path: '/systems/aegis' },
           ].map((item) => (
             <Link 
               key={item.id}
@@ -226,18 +240,34 @@ export default function Platform() {
           ))}
         </div>
         
-        <div className="w-48 md:w-72 border-l border-[#1A1A1A] flex flex-col justify-center px-4 md:px-8 bg-[#080808]">
-          <div className="flex justify-between items-end mb-2">
-            <span className="font-mono text-[8px] md:text-[9px] text-[#7A7A7A] tracking-tighter uppercase">Forecast Delta</span>
-            <span className="font-mono text-[9px] md:text-[10px] text-[#ff5722]">+12.4%</span>
+        <div className="w-56 md:w-80 border-l border-[#1A1A1A] flex flex-col justify-center px-4 md:px-6 bg-[#080808] py-3">
+          <div className="flex justify-between items-end mb-1">
+            <span className="font-mono text-[8px] text-[#7A7A7A] tracking-tighter uppercase">INDIA_CONNECTED_USERS</span>
+            <span className="font-mono text-[8px] text-[#7A7A7A] tracking-tighter uppercase">2005–2025</span>
           </div>
-          <div className="h-12 w-full flex items-end gap-1">
-            {[30, 45, 40, 60, 55].map((h, i) => (
-              <div key={i} className="bg-[#1A1A1A] w-full" style={{ height: `${h}%` }}></div>
-            ))}
-            <motion.div className="bg-[#ff5722] w-full h-[85%]" animate={{ height: ['85%', '95%', '85%'] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }}></motion.div>
-            <motion.div className="bg-[#ff5722] w-full h-[70%]" animate={{ height: ['70%', '80%', '70%'] }} transition={{ repeat: Infinity, duration: 2.5, ease: "linear" }}></motion.div>
-            <motion.div className="bg-[#ff5722] w-full h-[100%]" animate={{ height: ['100%', '90%', '100%'] }} transition={{ repeat: Infinity, duration: 3, ease: "linear" }}></motion.div>
+          <div className="h-16 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={indiaDataGrowth} margin={{ top: 4, right: 0, left: 0, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#ff5722" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#ff5722" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <XAxis dataKey="year" hide />
+                <Tooltip
+                  contentStyle={{ background: '#0A0A0A', border: '1px solid #1A1A1A', borderRadius: 0, fontSize: 9, fontFamily: 'monospace', color: '#7A7A7A' }}
+                  itemStyle={{ color: '#ff5722' }}
+                  labelStyle={{ color: '#7A7A7A', fontSize: 9 }}
+                  cursor={{ stroke: '#1A1A1A' }}
+                />
+                <ReferenceLine y={0} label={{ value: 'INTELLIGENCE EXTRACTED: ~0%', position: 'insideBottomLeft', fill: '#666', fontSize: 9, fontFamily: 'monospace' }} stroke="#333" />
+                <Area type="monotone" dataKey="users" stroke="#ff5722" strokeWidth={1.5} fill="url(#areaGrad)" dot={false} />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="font-mono text-[7px] text-[#ff5722] tracking-tighter uppercase mt-1">
+            SOURCE: WORLD BANK / TRAI / ITU
           </div>
         </div>
       </motion.div>

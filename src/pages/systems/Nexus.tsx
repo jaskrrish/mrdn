@@ -11,7 +11,7 @@ export default function Nexus() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-16">
           <div className="flex-1">
             <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-6">
-              SYSTEM_PROTOCOL: NEXUS_V2
+              SYSTEM_PROTOCOL: NEXUS_V1.0
             </div>
             <h1 className="text-7xl md:text-9xl font-bold tracking-tight leading-none mb-2">
               NEXUS
@@ -102,7 +102,7 @@ export default function Nexus() {
                   <span className="text-[#7A7A7A]">LEGAL_PROVISIONS</span>
                 </div>
                 <div className="font-mono text-[8px] text-[#333333] tracking-[0.1em] uppercase">
-                  © 2024 MERIDIAN TACTICAL SYSTEMS. ALL RIGHTS RESERVED.
+                  © 2026 MRDN
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default function Nexus() {
                 GRAPH_STRUCTURE
               </h2>
               <p className="text-[15px] text-[#7A7A7A] leading-relaxed max-w-md">
-                The architecture utilizes a non-linear hyper-graph database optimized for extremely high concurrency and massive-scale entity linking.
+                The architecture utilises a formal ontology graph connecting every operational entity across departments, systems, and external signals in real time.
               </p>
             </div>
             
