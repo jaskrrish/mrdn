@@ -26,154 +26,33 @@ export default function Nexus() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 text-right">
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">
-              LATENCY: 14MS
+        </div>
+
+        {/* 01 / CONNECTED OPERATIONAL INTELLIGENCE Section */}
+        <div className="max-w-3xl">
+          <div className="font-mono text-sm text-[#C45E1A] tracking-[0.15em] uppercase mb-8">
+            01 / CONNECTED OPERATIONAL INTELLIGENCE
+          </div>
+          <p className="text-lg text-[#7A7A7A] leading-relaxed mb-12">
+            Nexus eliminates the blind spots in enterprise operations by unifying your entire business into a single, living data model. Instead of letting critical data sit trapped inside isolated department silos — procurement, logistics, production, and finance — Nexus continuously maps the relationships between every supplier, raw material, assembly line, and customer order. When something changes in one corner of your operation, the ripple effects are automatically calculated and visible across your entire organisation, giving you a crystal-clear view of your business dynamics.
+          </p>
+
+          <div className="flex flex-col gap-4 border-t border-[#1A1A1A] pt-6">
+            <div className="flex justify-between items-center py-3 border-b border-[#1A1A1A]">
+              <span className="font-mono text-sm text-[#7A7A7A] tracking-[0.1em] uppercase">DEPARTMENTS_CONNECTED</span>
+              <span className="font-mono text-sm text-[#FFFFFF] tracking-[0.1em] uppercase">ALL</span>
             </div>
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">
-              CLUSTER: OMEGA-09
+            <div className="flex justify-between items-center py-3 border-b border-[#1A1A1A]">
+              <span className="font-mono text-sm text-[#7A7A7A] tracking-[0.1em] uppercase">GRAPH_REFRESH</span>
+              <span className="font-mono text-sm text-[#FFFFFF] tracking-[0.1em] uppercase">REAL-TIME</span>
             </div>
-            <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">
-              STATUS: ACTIVE_NOMINAL
+            <div className="flex justify-between items-center py-3 border-b border-[#1A1A1A]">
+              <span className="font-mono text-sm text-[#7A7A7A] tracking-[0.1em] uppercase">EXTERNAL_SIGNALS</span>
+              <span className="font-mono text-sm text-[#FFFFFF] tracking-[0.1em] uppercase">ACTIVE</span>
             </div>
           </div>
         </div>
 
-        {/* 01 / ENTITY RESOLUTION Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-          <div className="lg:col-span-1">
-            <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-8">
-              01 / ENTITY RESOLUTION
-            </div>
-            <p className="text-[13px] text-[#7A7A7A] leading-relaxed mb-12">
-              Nexus maps every operational entity — supplier, raw material, production line, customer order, logistics route, compliance filing — into a live knowledge graph. A change in one node propagates as an immediate signal across all connected nodes.
-            </p>
-            
-            <div className="flex flex-col gap-4">
-              <div className="flex justify-between items-center py-2">
-                <span className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">DEPARTMENTS_CONNECTED</span>
-                <span className="font-mono text-[10px] text-[#FFFFFF] tracking-[0.1em] uppercase">ALL</span>
-              </div>
-              <div className="flex justify-between items-center py-2">
-                <span className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">GRAPH_REFRESH</span>
-                <span className="font-mono text-[10px] text-[#FFFFFF] tracking-[0.1em] uppercase">REAL-TIME</span>
-              </div>
-              <div className="flex justify-between items-center py-2">
-                <span className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">EXTERNAL_SIGNALS</span>
-                <span className="font-mono text-[10px] text-[#FFFFFF] tracking-[0.1em] uppercase">ACTIVE</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="lg:col-span-2">
-            <div className="border border-[#1A1A1A] bg-[#0A0A0A] flex flex-col">
-              <div className="h-[400px] relative overflow-hidden p-6">
-                <div className="font-mono text-[8px] text-[#333333] tracking-[0.1em] uppercase absolute top-6 left-6">
-                  TACTICAL_GRID_OVERLAY_V4.2
-                </div>
-                
-                {/* Visual Graph */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="absolute inset-0 w-full h-full" style={{ pointerEvents: 'none' }}>
-                    <line x1="30%" y1="60%" x2="40%" y2="40%" stroke="#333333" strokeWidth="1" />
-                    <line x1="40%" y1="40%" x2="60%" y2="50%" stroke="#C45E1A" strokeWidth="1" />
-                    <line x1="60%" y1="50%" x2="75%" y2="45%" stroke="#333333" strokeWidth="1" />
-                  </svg>
-                  
-                  <motion.div className="absolute left-[40%] top-[40%] -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#C45E1A]" animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }}></motion.div>
-                  
-                  <div className="absolute left-[60%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex items-center gap-4">
-                    <div className="w-4 h-4 bg-[#C45E1A] border border-[#FFFFFF] flex-shrink-0"></div>
-                    <div className="font-mono text-[8px] text-[#FFFFFF] tracking-[0.1em] uppercase leading-relaxed">
-                      CORE_HUB: NEXUS_GRAPH<br/>
-                      GRAPH_INTEGRITY: 100%<br/>
-                      ACTIVE_ENTITIES: 1,442
-                    </div>
-                  </div>
-                  
-                  <div className="absolute left-[75%] top-[45%] -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#333333]"></div>
-                </div>
-              </div>
-              
-              <div className="bg-[#000000] border-t border-[#1A1A1A] p-4 flex justify-between items-center">
-                <div className="flex gap-6 font-mono text-[8px] text-[#FFFFFF] tracking-[0.1em] uppercase">
-                  <span>SYSTEM_STATUS</span>
-                  <span className="text-[#7A7A7A]">ENCRYPTION_LOGS</span>
-                  <span className="text-[#7A7A7A]">LEGAL_PROVISIONS</span>
-                </div>
-                <div className="font-mono text-[8px] text-[#333333] tracking-[0.1em] uppercase">
-                  © 2026 MRDN
-                </div>
-              </div>
-            </div>
-            <div className="font-mono text-[8px] text-[#C45E1A] tracking-[0.1em] uppercase text-right mt-4">
-              LAYER_01: COMMERCIAL_INTELLIGENCE_GRAPH
-            </div>
-          </div>
-        </div>
-
-        {/* GRAPH_STRUCTURE & RELATIONSHIP_VECTORS Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-[#1A1A1A] p-12 flex flex-col justify-between min-h-[320px]">
-            <div>
-              <h2 className="text-3xl font-bold text-[#FFFFFF] mb-6 uppercase tracking-tight">
-                GRAPH_STRUCTURE
-              </h2>
-              <p className="text-[15px] text-[#7A7A7A] leading-relaxed max-w-md">
-                The architecture utilises a formal ontology graph connecting every operational entity across departments, systems, and external signals in real time.
-              </p>
-            </div>
-            
-            <div className="flex gap-16 mt-12">
-              <div className="flex flex-col gap-2">
-                <div className="font-mono text-4xl text-[#C45E1A]">12.4M</div>
-                <div className="font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase">ACTIVE_NODES</div>
-              </div>
-              <div className="flex flex-col gap-2">
-                <div className="font-mono text-4xl text-[#C45E1A]">0.03ms</div>
-                <div className="font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase">QUERY_RESPONSE</div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-12 flex flex-col justify-center min-h-[320px]">
-            <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-12">
-              RELATIONSHIP_VECTORS
-            </div>
-            
-            <div className="flex flex-col gap-8">
-              <div className="flex flex-col gap-3">
-                <div className="flex justify-between items-center">
-                  <span className="font-mono text-[10px] text-[#FFFFFF] tracking-[0.1em] uppercase">OPERATIONAL_BOND</span>
-                  <span className="font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">STRENGTH: HIGH</span>
-                </div>
-                <div className="h-1 bg-[#1A1A1A] w-full">
-                  <div className="h-full bg-[#C45E1A] w-full"></div>
-                </div>
-              </div>
-              
-              <div className="flex flex-col gap-3">
-                <div className="flex justify-between items-center">
-                  <span className="font-mono text-[10px] text-[#FFFFFF] tracking-[0.1em] uppercase">DATA_SYNERGY</span>
-                  <span className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">STRENGTH: NOMINAL</span>
-                </div>
-                <div className="h-1 bg-[#1A1A1A] w-full">
-                  <div className="h-full bg-[#333333] w-[70%]"></div>
-                </div>
-              </div>
-              
-              <div className="flex flex-col gap-3">
-                <div className="flex justify-between items-center">
-                  <span className="font-mono text-[10px] text-[#FFFFFF] tracking-[0.1em] uppercase">CRYPTOGRAPHIC_LINK</span>
-                  <span className="font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">STRENGTH: CRITICAL</span>
-                </div>
-                <div className="h-1 bg-[#1A1A1A] w-full">
-                  <div className="h-full bg-[#C45E1A] w-[95%]"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* CONTEXT_LAYER_EXPANSION Section */}
         <div className="flex flex-col gap-8">
@@ -242,19 +121,19 @@ export default function Nexus() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
           <div className="lg:col-span-1">
             <h2 className="text-2xl font-bold text-[#FFFFFF] uppercase tracking-tight border-t-2 border-[#C45E1A] pt-6 mb-6">
-              EXTERNAL_SIGNAL_ENRICHMENT
+              PROACTIVE_MACRO_EVENT_RESPONSE
             </h2>
             <p className="text-[15px] text-[#7A7A7A] leading-relaxed">
-              Nexus is natively integrated with the BhAi News Platform. Macro events — import duty changes, US tariff announcements, commodity price movements — are automatically ingested and mapped to the affected graph nodes in real time.
+              Nexus features an intelligent, automated signal engine that constantly monitors real-time global events — shifting import duties, geopolitical tariff updates, and sudden commodity price spikes. Because these external signals are directly linked to your operational data graph, disruptions are instantly translated into actionable internal updates, showing you exactly which production lines, client timelines, and profit margins will be impacted before it happens.
             </p>
           </div>
-          
+
           <div className="lg:col-span-2 bg-[#C45E1A] text-[#000000] p-8 sm:p-16 md:p-24 flex flex-col justify-center items-center text-center">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 uppercase">
-              LIVE INTELLIGENCE. ZERO MANUAL CONFIGURATION.
+              DYNAMIC, CONFIGURATION-FREE AGILITY.
             </h2>
             <div className="font-mono text-[10px] md:text-xs tracking-[0.15em] uppercase max-w-lg">
-              "A SPIKE IN STEEL IMPORT DUTIES IS NOT A NEWS ITEM — IT IS A GRAPH EVENT THAT PROPAGATES ACROSS PROCUREMENT, PRODUCTION, AND CLIENT TIMELINES SIMULTANEOUSLY."
+              "NEXUS AUTOMATICALLY RESOLVES, UPDATES, AND SCALES YOUR OPERATIONAL GRAPH WITH ZERO MANUAL UPKEEP — MOVING YOUR ORGANISATION FROM REACTIVE FIREFIGHTING TO PREDICTIVE, HIGHLY AGILE DECISION-MAKING."
             </div>
           </div>
         </div>

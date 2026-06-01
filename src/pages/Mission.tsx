@@ -30,8 +30,8 @@ export default function Mission() {
           </p>
         </section>
 
-        <div className="border-l border-[#C45E1A] pl-6 mt-16 py-2">
-          <p className="font-mono text-xs text-[#FFFFFF] uppercase tracking-widest opacity-80">
+        <div className="border-l-4 border-[#C45E1A] pl-6 mt-16 py-4 bg-[#0A0A0A]">
+          <p className="font-mono text-sm md:text-base text-[#FFFFFF] uppercase tracking-widest leading-loose">
             "India relies on foreign software for its most sensitive intelligence. That ends with MRDN."
           </p>
         </div>

@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Platform from './pages/Platform';
 import Systems from './pages/Systems';
-import Intelligence from './pages/Intelligence';
 import Mission from './pages/Mission';
 import Contact from './pages/Contact';
 import Helix from './pages/systems/Helix';
@@ -26,7 +25,6 @@ export default function App() {
           <Route path="systems/aegis" element={<Aegis />} />
           <Route path="systems/orion" element={<Orion />} />
           <Route path="systems/nexus" element={<Nexus />} />
-          <Route path="intelligence" element={<Intelligence />} />
           <Route path="mission" element={<Mission />} />
           <Route path="contact" element={<Contact />} />
         </Route>

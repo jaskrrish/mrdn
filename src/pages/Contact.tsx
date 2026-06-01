@@ -28,10 +28,12 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      // Simulate submission
-      setTimeout(() => {
-        setSubmitted(true);
-      }, 500);
+      const subject = encodeURIComponent(`MRDN Access Request — ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nOrganization: ${formData.organization}\nEmail: ${formData.email}\n\nUse Case:\n${formData.useCase}`
+      );
+      window.location.href = `mailto:info@zaio.in?subject=${subject}&body=${body}`;
+      setSubmitted(true);
     }
   };
 

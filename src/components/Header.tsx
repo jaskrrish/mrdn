@@ -1,6 +1,7 @@
 import { NavLink, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
+import whiteLogo from '../assets/white-logo.png';
 
 export default function Header() {
   const [isSystemsHovered, setIsSystemsHovered] = useState(false);
@@ -9,16 +10,15 @@ export default function Header() {
   const navItems = [
     { name: 'PLATFORM', path: '/' },
     { name: 'SYSTEMS', path: '/systems' },
-    { name: 'INTELLIGENCE', path: '/intelligence' },
     { name: 'MISSION', path: '/mission' },
     { name: 'IDLY', path: 'https://idly.world', external: true },
     { name: 'CONTACT', path: '/contact' },
   ];
 
   const systemSubItems = [
-    { name: 'HELIX', path: '/systems/helix' },
-    { name: 'NEXUS', path: '/systems/nexus' },
     { name: 'ORION', path: '/systems/orion' },
+    { name: 'NEXUS', path: '/systems/nexus' },
+    { name: 'HELIX', path: '/systems/helix' },
     { name: 'AEGIS', path: '/systems/aegis' },
   ];
 
@@ -30,9 +30,9 @@ export default function Header() {
           {/* Logo */}
           <Link
             to="/"
-            className="font-mono text-[15px] font-bold tracking-[0.2em] text-[#FFFFFF] uppercase hover:text-[#ff5722] transition-colors flex-none"
+            className="flex-none flex items-center hover:opacity-80 transition-opacity"
           >
-            MRDN
+            <img src={whiteLogo} alt="MRDN" className="h-9 w-auto" />
           </Link>
 
           {/* Desktop Nav */}

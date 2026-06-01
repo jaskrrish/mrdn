@@ -1,0 +1,54 @@
+home page:
+- hero section - half cut : ref `mrdn.in` 
+- a small terminal in the hero section please remove that  'SYSTEM LOG // 22:14:09' 
+- footer graph to be more visible properly in that 'INTELLIGENCE' is that properly visible , in the users count add M as prefix , also resize the fonts sufficiently. 
+
+Everypage:
+- wherever you see  '--' please remove that with ','
+- scroll to top for page transistions
+- everywhere change the order to '- orion -> nexus -> helix -> aegis.' in the timeline in the footer in the navbar properly update these 
+
+systems page: 
+- remove system health graph  and signal latency. 
+- strategy section to be more bolder and visible  - 
+- M_NODE_01 -> PLATFORM_01  , M_NODE_02 -> platform_02 ( change for all )
+- text in PLATFORM_01 to be more bigger 
+- in timeline graph remove the active text  
+- timeline 01_init , 02_sync  remove these as well  
+
+intelligence : 
+- remove the page itself 
+
+
+helix: 
+- remove latency column from the endpoint tables 
+- in the image remove ontology nodes active
+- threat latency score and quarantive , that section needs to be removed 
+- remove the status: ALL 15–20 MINISTRY NODES: ONLINE.  tag in the bottom 
+- access logs button - remove 
+
+nexus: 
+- LATENCY: 14MS CLUSTER: OMEGA-09 STATUS: ACTIVE_NOMINAL -> these things to be removed 
+- 01 entitiy graph to be removed and fix the left hand side text resize it efficiently 
+- remove the graph structure sections entirerly 
+
+orion : 
+- 01 // THE PROBLEM WE SOLVE -> headings more bigger in size in fonts
+- status classification onboard time - remove 
+- hub-and-spoke architecture-> resize the fonts for that headings  - remove bhAI used anywhere . 
+- remove HUB_UPTIME_TARGET and AGENT_CONCURRENCY section . 
+
+Aegis : 
+- LIVE_MODEL_TELEMETRY section not needed 
+- what aegis does - no graph need.
+- deviation protocol - right side image remove. 
+- intelligence prioritization - no need . 
+- monitor intergator - remove 
+- req access -> contact page . 
+
+
+mission : 
+- 'india relies...' quote not visible much 
+
+contact page  - 
+- mailto info@zaio.in

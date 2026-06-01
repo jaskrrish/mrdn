@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export default function Orion() {
   return (
@@ -20,20 +21,6 @@ export default function Orion() {
               </div>
             </div>
             
-            <div className="flex flex-col border-t border-[#1A1A1A]">
-              <div className="flex justify-between py-3 border-b border-[#1A1A1A]">
-                <span className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">STATUS</span>
-                <span className="font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">OPERATIONAL</span>
-              </div>
-              <div className="flex justify-between py-3 border-b border-[#1A1A1A]">
-                <span className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">CLASSIFICATION</span>
-                <span className="font-mono text-[10px] text-[#FFFFFF] tracking-[0.1em] uppercase">INTERNAL // RESTRICTED</span>
-              </div>
-              <div className="flex justify-between py-3 border-b border-[#1A1A1A]">
-                <span className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">ONBOARD_TIME</span>
-                <span className="font-mono text-[10px] text-[#FFFFFF] tracking-[0.1em] uppercase">4–6 WEEKS (TARGET)</span>
-              </div>
-            </div>
           </div>
 
           <div className="hidden sm:flex items-center justify-end h-full">
@@ -83,7 +70,7 @@ export default function Orion() {
         {/* 01 // INPUT PROCESSING Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-6">
+            <div className="font-mono text-base md:text-xl text-[#C45E1A] tracking-[0.15em] uppercase mb-6 font-bold">
               01 // THE PROBLEM WE SOLVE
             </div>
             <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
@@ -92,11 +79,11 @@ export default function Orion() {
           </div>
           
           <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-8 flex justify-center items-center gap-8 h-32">
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">INPUT</div>
+            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">MESSY DATA</div>
             <div className="text-[#333333]">→</div>
-            <div className="border border-[#C45E1A] px-4 py-2 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">INFERENCE</div>
+            <div className="border border-[#C45E1A] px-4 py-2 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">DATA CONNECTORS</div>
             <div className="text-[#333333]">→</div>
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">OUTPUT</div>
+            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">SOFTWARE</div>
           </div>
         </div>
 
@@ -147,23 +134,12 @@ export default function Orion() {
           
           <div className="flex flex-col gap-8">
             <div>
-              <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-6">
+              <div className="font-mono text-base md:text-xl text-[#C45E1A] tracking-[0.15em] uppercase mb-6 font-bold">
                 03 // HUB-AND-SPOKE ARCHITECTURE
               </div>
               <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF]">
-                A centralised Orion Hub is deployed on the client's private infrastructure or a dedicated BhAi-managed node. This hub maintains persistent, authenticated connections to all approved data sources across the organisation. Discovery agents run continuously — detecting schema changes, data drift, and pipeline failures — and auto-remediate without human intervention.
+                A centralised Orion Hub is deployed on the client's private infrastructure or a dedicated MRDN-managed node. This hub maintains persistent, authenticated connections to all approved data sources across the organisation. Discovery agents run continuously — detecting schema changes, data drift, and pipeline failures — and auto-remediate without human intervention.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-4">
-                <div className="font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase mb-2">AGENT_CONCURRENCY</div>
-                <div className="text-2xl font-medium">Ultra-High</div>
-              </div>
-              <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-4">
-                <div className="font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase mb-2">HUB_UPTIME_TARGET</div>
-                <div className="text-2xl font-medium">99.99%</div>
-              </div>
             </div>
           </div>
         </div>
@@ -281,9 +257,17 @@ export default function Orion() {
             <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-6">
               06 // OUR UNFAIR ADVANTAGE
             </div>
-            <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
-              Palantir Apollo requires 6 to 8 months and 10 to 15 forward-deployed engineers per client. Orion targets 4 to 6 weeks with autonomous agents and one human review checkpoint — schema approval only. The cost structure this creates opens MRDN to mid-market Indian enterprises — clients Palantir structurally cannot serve at viable economics.
-            </p>
+            <div className="flex flex-col gap-5">
+              <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
+                Traditional enterprise intelligence deployments are notoriously slow, labor-intensive, and cost-prohibitive. Legacy global competitors typically require 6 to 8 months of onboarding, alongside a dedicated team of 10 to 15 forward-deployed engineers embedded on-site just to wire up the infrastructure.
+              </p>
+              <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
+                Orion fundamentally disrupts this model. By utilizing specialized autonomous agents to handle complex data integration and ontology mapping, Orion slashes deployment timelines down to just 1 to 2 weeks.
+              </p>
+              <p className="text-sm md:text-base leading-relaxed text-[#7A7A7A] max-w-md">
+                The entire process requires only a single human checkpoint: final schema approval by your team.
+              </p>
+            </div>
           </div>
           
           <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-8 flex items-center justify-center h-48 relative">
@@ -311,11 +295,11 @@ export default function Orion() {
           </div>
           
           <div className="flex items-center justify-between w-full">
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">HELIX</div>
+            <div className="border border-[#C45E1A] px-4 py-1 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">ORION</div>
             <div className="text-[#333333] text-xs">&gt;</div>
             <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">NEXUS</div>
             <div className="text-[#333333] text-xs">&gt;</div>
-            <div className="border border-[#C45E1A] px-4 py-1 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">ORION</div>
+            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">HELIX</div>
             <div className="text-[#333333] text-xs">&gt;</div>
             <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">AEGIS</div>
           </div>
@@ -329,9 +313,9 @@ export default function Orion() {
           <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase mb-8">
             AGENT-DRIVEN ONBOARDING. HUMAN REVIEW AT ONE CHECKPOINT ONLY.
           </div>
-          <button className="bg-[#C45E1A] text-[#000000] font-mono text-[11px] tracking-[0.1em] uppercase px-8 py-4 hover:bg-[#A34A10] transition-colors">
+          <Link to="/contact" className="bg-[#C45E1A] text-[#000000] font-mono text-[11px] tracking-[0.1em] uppercase px-8 py-4 hover:bg-[#A34A10] transition-colors">
             REQUEST ACCESS
-          </button>
+          </Link>
         </div>
 
         <div className="flex justify-between items-center border-t border-[#1A1A1A] pt-6">

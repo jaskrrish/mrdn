@@ -38,24 +38,20 @@ export default function Helix() {
               <thead>
                 <tr className="text-[#7A7A7A] border-b border-[#1A1A1A]">
                   <th className="pb-4 font-normal">ENDPOINT_ID</th>
-                  <th className="pb-4 font-normal">LATENCY_MS</th>
                   <th className="pb-4 font-normal">TYPE</th>
                 </tr>
               </thead>
               <tbody className="text-[#FFFFFF]">
                 <tr className="border-b border-[#1A1A1A]">
                   <td className="py-4">MINISTRY_DB</td>
-                  <td className="py-4 text-[#C45E1A]">0.04</td>
                   <td className="py-4">STRUCTURED</td>
                 </tr>
                 <tr className="border-b border-[#1A1A1A]">
                   <td className="py-4">OSINT_STREAM</td>
-                  <td className="py-4 text-[#C45E1A]">0.12</td>
                   <td className="py-4">UNSTRUCTURED</td>
                 </tr>
                 <tr className="border-b border-[#1A1A1A]">
                   <td className="py-4">GEOSPATIAL</td>
-                  <td className="py-4 text-[#C45E1A]">0.08</td>
                   <td className="py-4">VECTOR</td>
                 </tr>
               </tbody>
@@ -147,11 +143,6 @@ export default function Helix() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent"></div>
         
-        <div className="absolute top-8 right-8 border-l border-[#C45E1A] pl-4">
-          <span className="font-mono text-[8px] text-[#7A7A7A] tracking-widest uppercase block mb-1">ONTOLOGY_NODES_ACTIVE</span>
-          <span className="font-sans text-2xl font-bold text-[#FFFFFF]">1,402</span>
-        </div>
-
         <div className="absolute bottom-8 left-8 max-w-xl pr-8">
           <span className="font-mono text-[10px] text-[#C45E1A] tracking-widest uppercase block mb-4">SURFACE_SCAN // INTELLIGENCE_LAYER</span>
           <p className="font-sans text-lg md:text-xl text-[#FFFFFF] leading-snug">
@@ -206,16 +197,6 @@ export default function Helix() {
           <p className="text-xl font-sans text-[#FFFFFF] leading-snug mb-12">
             Every converging signal cluster is evaluated against a multi-agency cross-reference. Composite threat scores are generated in real time. Low-confidence signals are quarantined and flagged for analyst review.
           </p>
-          <div className="grid grid-cols-2 gap-6">
-            <div className="border border-[#1A1A1A] p-6">
-              <span className="font-mono text-[9px] text-[#7A7A7A] tracking-widest uppercase block mb-2">THREAT_SCORE_LATENCY</span>
-              <span className="font-sans text-2xl text-[#FFFFFF]">&lt;200MS</span>
-            </div>
-            <div className="border border-[#1A1A1A] p-6">
-              <span className="font-mono text-[9px] text-[#7A7A7A] tracking-widest uppercase block mb-2">QUARANTINE</span>
-              <span className="font-sans text-2xl text-[#FFFFFF]">ACTIVE</span>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -263,18 +244,10 @@ export default function Helix() {
       </section>
 
       {/* Footer Area */}
-      <div className="border-t-4 border-[#C45E1A] pt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-        <div>
-          <h2 className="font-mono text-xl md:text-2xl text-[#FFFFFF] tracking-widest uppercase mb-2">
-            HELIX IS INDIA'S SOVEREIGN THREAT INTELLIGENCE LAYER.
-          </h2>
-          <h3 className="font-mono text-xl md:text-2xl text-[#FFFFFF] tracking-widest uppercase mb-8">
-            STATUS: <span className="text-[#C45E1A]">ALL 15–20 MINISTRY NODES: ONLINE</span>.
-          </h3>
-        </div>
-        <button className="bg-[#FFFFFF] text-[#000000] px-6 py-3 font-mono text-[10px] tracking-widest uppercase hover:bg-[#C45E1A] hover:text-[#FFFFFF] transition-colors flex items-center gap-4 shrink-0">
-          ACCESS LOGS <span>→</span>
-        </button>
+      <div className="border-t-4 border-[#C45E1A] pt-12">
+        <h2 className="font-mono text-xl md:text-2xl text-[#FFFFFF] tracking-widest uppercase mb-2">
+          HELIX IS INDIA'S SOVEREIGN THREAT INTELLIGENCE LAYER.
+        </h2>
       </div>
     </div>
   );
