@@ -24,43 +24,36 @@ export default function Orion() {
           </div>
 
           <div className="hidden sm:flex items-center justify-end h-full">
-            <div className="flex gap-8 items-start relative">
+            <div className="flex gap-10 items-start relative">
               {/* Connecting lines */}
               <svg className="absolute inset-0 w-full h-full -z-10" style={{ pointerEvents: 'none' }}>
-                <motion.path d="M 80 20 L 120 20" stroke="#C45E1A" strokeWidth="1" fill="none" strokeDasharray="4 4" animate={{ strokeDashoffset: [0, -8] }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} />
-                <path d="M 80 20 L 100 20 L 100 60 L 120 60" stroke="#333333" strokeWidth="1" fill="none" />
-                <path d="M 220 20 L 240 20 L 240 60 L 260 60" stroke="#333333" strokeWidth="1" fill="none" />
-                <motion.path d="M 220 20 L 260 20" stroke="#C45E1A" strokeWidth="1" fill="none" strokeDasharray="4 4" animate={{ strokeDashoffset: [0, -8] }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} />
-                <motion.path d="M 360 20 L 380 20 L 380 40 L 400 40" stroke="#C45E1A" strokeWidth="1" fill="none" strokeDasharray="4 4" animate={{ strokeDashoffset: [0, -8] }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} />
+                <motion.path d="M 120 26 L 168 26" stroke="#C45E1A" strokeWidth="1.5" fill="none" strokeDasharray="5 4" animate={{ strokeDashoffset: [0, -9] }} transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }} />
+                <path d="M 120 26 L 144 26 L 144 82 L 168 82" stroke="#333333" strokeWidth="1" fill="none" />
+                <path d="M 304 26 L 328 26 L 328 82 L 352 82" stroke="#333333" strokeWidth="1" fill="none" />
+                <motion.path d="M 304 26 L 352 26" stroke="#C45E1A" strokeWidth="1.5" fill="none" strokeDasharray="5 4" animate={{ strokeDashoffset: [0, -9] }} transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }} />
               </svg>
 
-              <div className="flex flex-col gap-6">
-                <div className="border border-[#C45E1A] px-4 py-2 font-mono text-[8px] text-[#C45E1A] tracking-[0.1em] uppercase bg-[#0A0A0A] w-24 text-center">
-                  ROOT NODE
-                </div>
-              </div>
-              
-              <div className="flex flex-col gap-6">
-                <div className="border border-[#C45E1A] px-4 py-2 font-mono text-[8px] text-[#C45E1A] tracking-[0.1em] uppercase bg-[#0A0A0A] w-24 text-center">
-                  PATH ALPHA
-                </div>
-                <div className="border border-[#1A1A1A] px-4 py-2 font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase bg-[#0A0A0A] w-24 text-center">
-                  PATH BETA
+              <div className="flex flex-col gap-8">
+                <div className="border-2 border-[#C45E1A] px-5 py-5 font-mono text-[11px] text-[#C45E1A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
+                  CLIENT DATA HUBS
                 </div>
               </div>
 
-              <div className="flex flex-col gap-6">
-                <div className="border border-[#1A1A1A] px-4 py-2 font-mono text-[8px] text-[#7A7A7A] tracking-[0.1em] uppercase bg-[#0A0A0A] w-24 text-center">
-                  PATH GAMMA
+              <div className="flex flex-col gap-8">
+                <div className="border-2 border-[#C45E1A] px-5 py-5 font-mono text-[11px] text-[#C45E1A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
+                  DISCOVERY AGENT
                 </div>
-                <div className="border border-[#C45E1A] px-4 py-2 font-mono text-[8px] text-[#C45E1A] tracking-[0.1em] uppercase bg-[#0A0A0A] w-24 text-center">
-                  TARGET LOCK
+                <div className="border border-[#2A2A2A] px-5 py-5 font-mono text-[11px] text-[#7A7A7A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
+                  SCHEMA MAPPER
                 </div>
               </div>
 
-              <div className="flex flex-col gap-6 pt-6">
-                <div className="border border-[#C45E1A] px-4 py-2 font-mono text-[8px] text-[#C45E1A] tracking-[0.1em] uppercase bg-[#0A0A0A] w-28 text-center">
-                  TERMINAL OUTPUT
+              <div className="flex flex-col gap-8">
+                <div className="border border-[#2A2A2A] px-5 py-5 font-mono text-[11px] text-[#7A7A7A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
+                  DATA CONNECTORS
+                </div>
+                <div className="border-2 border-[#C45E1A] px-5 py-5 font-mono text-[11px] text-[#C45E1A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
+                  QUALITY GATES
                 </div>
               </div>
             </div>
@@ -115,23 +108,63 @@ export default function Orion() {
 
         {/* 03 // LAYERED REASONING Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="border border-[#1A1A1A] bg-[#0A0A0A] aspect-square relative flex items-center justify-center p-8 max-w-md mx-auto w-full">
-            {/* Cross lines */}
-            <div className="absolute left-0 right-0 top-1/2 h-[1px] bg-[#1A1A1A]"></div>
-            <div className="absolute top-0 bottom-0 left-1/2 w-[1px] bg-[#1A1A1A]"></div>
-            
-            {/* Corner squares */}
-            <div className="absolute top-8 left-8 w-3 h-3 bg-[#C45E1A]"></div>
-            <div className="absolute top-8 right-8 w-3 h-3 bg-[#333333]"></div>
-            <div className="absolute bottom-8 left-8 w-3 h-3 bg-[#333333]"></div>
-            <div className="absolute bottom-8 right-8 w-3 h-3 bg-[#C45E1A]"></div>
-            
-            {/* Center box */}
-            <div className="border border-[#C45E1A] bg-[#0A0A0A] px-4 py-2 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase z-10">
-              CORE
-            </div>
+          <div className="border border-[#1A1A1A] bg-[#0A0A0A] aspect-square relative max-w-md mx-auto w-full overflow-hidden">
+            <svg className="w-full h-full" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#C45E1A" stopOpacity="0.18" />
+                  <stop offset="100%" stopColor="#C45E1A" stopOpacity="0" />
+                </radialGradient>
+              </defs>
+
+              {/* Hub ambient glow */}
+              <circle cx="150" cy="150" r="60" fill="url(#hubGlow)" />
+
+              {/* Animated spoke lines — drawn before nodes so rects mask endpoints */}
+              <motion.line x1="150" y1="150" x2="150" y2="60" stroke="#C45E1A" strokeWidth="0.8" strokeDasharray="4 3" animate={{ strokeDashoffset: [0, -7] }} transition={{ repeat: Infinity, duration: 1.0, ease: "linear" }} />
+              <motion.line x1="150" y1="150" x2="229" y2="105" stroke="#C45E1A" strokeWidth="0.8" strokeDasharray="4 3" animate={{ strokeDashoffset: [0, -7] }} transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }} />
+              <motion.line x1="150" y1="150" x2="229" y2="195" stroke="#C45E1A" strokeWidth="0.8" strokeDasharray="4 3" animate={{ strokeDashoffset: [0, -7] }} transition={{ repeat: Infinity, duration: 0.9, ease: "linear" }} />
+              <motion.line x1="150" y1="150" x2="150" y2="240" stroke="#C45E1A" strokeWidth="0.8" strokeDasharray="4 3" animate={{ strokeDashoffset: [0, -7] }} transition={{ repeat: Infinity, duration: 1.1, ease: "linear" }} />
+              <motion.line x1="150" y1="150" x2="71" y2="195" stroke="#C45E1A" strokeWidth="0.8" strokeDasharray="4 3" animate={{ strokeDashoffset: [0, -7] }} transition={{ repeat: Infinity, duration: 1.3, ease: "linear" }} />
+              <motion.line x1="150" y1="150" x2="71" y2="105" stroke="#C45E1A" strokeWidth="0.8" strokeDasharray="4 3" animate={{ strokeDashoffset: [0, -7] }} transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }} />
+
+              {/* Spoke nodes */}
+              <rect x="118" y="50" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
+              <text x="150" y="64" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">ERP_SYSTEM</text>
+
+              <rect x="197" y="95" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
+              <text x="229" y="109" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">CRM_DATA</text>
+
+              <rect x="197" y="185" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
+              <text x="229" y="199" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">SCADA_FEED</text>
+
+              <rect x="118" y="230" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
+              <text x="150" y="244" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">SAP_CORE</text>
+
+              <rect x="39" y="185" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
+              <text x="71" y="199" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">FILE_STORE</text>
+
+              <rect x="39" y="95" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
+              <text x="71" y="109" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">API_LAYER</text>
+
+              {/* Active connection dots on spoke nodes */}
+              <circle cx="119" cy="51" r="2.5" fill="#C45E1A" opacity="0.8" />
+              <circle cx="198" cy="96" r="2.5" fill="#C45E1A" opacity="0.8" />
+              <circle cx="198" cy="186" r="2.5" fill="#C45E1A" opacity="0.8" />
+              <circle cx="119" cy="231" r="2.5" fill="#C45E1A" opacity="0.8" />
+              <circle cx="40" cy="186" r="2.5" fill="#C45E1A" opacity="0.8" />
+              <circle cx="40" cy="96" r="2.5" fill="#C45E1A" opacity="0.8" />
+
+              {/* Center hub node — drawn last to sit above all lines */}
+              <rect x="114" y="132" width="72" height="36" fill="#0A0A0A" stroke="#C45E1A" strokeWidth="1.5" />
+              <text x="150" y="147" textAnchor="middle" fill="#C45E1A" fontFamily="Courier New, monospace" fontSize="8" fontWeight="700" letterSpacing="2">ORION</text>
+              <text x="150" y="162" textAnchor="middle" fill="#C45E1A" fontFamily="Courier New, monospace" fontSize="8" fontWeight="700" letterSpacing="2">HUB</text>
+
+              {/* Footer status */}
+              <text x="150" y="291" textAnchor="middle" fill="#333333" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="2">ACTIVE_CONNECTIONS: 6</text>
+            </svg>
           </div>
-          
+
           <div className="flex flex-col gap-8">
             <div>
               <div className="font-mono text-base md:text-xl text-[#C45E1A] tracking-[0.15em] uppercase mb-6 font-bold">
@@ -186,76 +219,12 @@ export default function Orion() {
           </div>
         </div>
 
-        {/* 05 // DECISION GRAPH Section */}
-        <div>
-          <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-8">
-            05 // DECISION GRAPH (REAL-TIME RENDER)
-          </div>
-          
-          <div className="border border-[#1A1A1A] bg-[#0A0A0A] h-80 relative overflow-hidden">
-            {/* Grid lines */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1A1A1A_1px,transparent_1px),linear-gradient(to_bottom,#1A1A1A_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-30"></div>
-            
-            {/* Graph Visual */}
-            <div className="absolute inset-0 flex items-center justify-between px-16">
-              {/* Node 1 */}
-              <div className="w-8 h-8 bg-[#C45E1A] relative z-10"></div>
-              
-              {/* Node 2 Column */}
-              <div className="flex flex-col gap-8 relative z-10">
-                <div className="w-3 h-3 bg-[#333333]"></div>
-                <div className="w-3 h-3 bg-[#C45E1A]"></div>
-                <div className="w-3 h-3 bg-[#333333]"></div>
-              </div>
-              
-              {/* Node 3 Column */}
-              <div className="flex flex-col gap-4 relative z-10">
-                <div className="w-3 h-3 bg-[#333333]"></div>
-                <div className="w-3 h-3 bg-[#333333]"></div>
-                <div className="w-4 h-4 bg-[#C45E1A]"></div>
-                <div className="w-3 h-3 bg-[#333333]"></div>
-                <div className="w-3 h-3 bg-[#333333]"></div>
-              </div>
-              
-              {/* Node 4 Column */}
-              <div className="flex flex-col gap-2 relative z-10">
-                <div className="w-2 h-2 bg-[#333333]"></div>
-                <div className="w-2 h-2 bg-[#333333]"></div>
-                <div className="w-2 h-2 bg-[#333333]"></div>
-                <div className="w-3 h-3 bg-[#C45E1A]"></div>
-                <div className="w-2 h-2 bg-[#333333]"></div>
-                <div className="w-2 h-2 bg-[#333333]"></div>
-              </div>
-              
-              {/* Node 5 Column */}
-              <div className="flex flex-col gap-2 relative z-10">
-                <div className="w-1 h-1 bg-[#333333]"></div>
-                <div className="w-1 h-1 bg-[#333333]"></div>
-                <div className="w-1 h-1 bg-[#333333]"></div>
-                <div className="w-2 h-2 bg-[#C45E1A]"></div>
-                <div className="w-1 h-1 bg-[#333333]"></div>
-                <div className="w-1 h-1 bg-[#333333]"></div>
-              </div>
-            </div>
-            
-            {/* Connecting Lines */}
-            <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
-              {/* Main Path */}
-              <polyline points="10,50 30,50 50,55 70,50 90,55" fill="none" stroke="#C45E1A" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-              {/* Branch Paths */}
-              <polyline points="10,50 30,35" fill="none" stroke="#333333" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-              <polyline points="10,50 30,65" fill="none" stroke="#333333" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-              <polyline points="30,50 50,35" fill="none" stroke="#333333" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-              <polyline points="30,50 50,75" fill="none" stroke="#333333" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-            </svg>
-          </div>
-        </div>
 
-        {/* 06 // EMERGENT BEHAVIOR Section */}
+        {/* 05 // EMERGENT BEHAVIOR Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-6">
-              06 // OUR UNFAIR ADVANTAGE
+              05 // OUR UNFAIR ADVANTAGE
             </div>
             <div className="flex flex-col gap-5">
               <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
@@ -288,10 +257,10 @@ export default function Orion() {
           </div>
         </div>
 
-        {/* 07 // ECOSYSTEM INTEGRATION Section */}
+        {/* 06 // ECOSYSTEM INTEGRATION Section */}
         <div>
           <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-8">
-            07 // ECOSYSTEM INTEGRATION
+            06 // ECOSYSTEM INTEGRATION
           </div>
           
           <div className="flex items-center justify-between w-full">

@@ -1,5 +1,5 @@
-import { motion } from 'motion/react';
 import { useState } from 'react';
+import NexusConstellationGraph from "../../components/NexusConstellationGraph";
 
 export default function Nexus() {
   const [nexusVideoSrc] = useState<string>("https://drive.google.com/file/d/1JbJ1l0a2qUVTyI5KI8EiJePen02jjyIW/preview");
@@ -66,23 +66,8 @@ export default function Nexus() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 border border-[#1A1A1A] bg-[#0A0A0A] h-[400px] relative flex items-center justify-center overflow-hidden">
-              {/* Abstract background */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0%,transparent_70%)]"></div>
-                <motion.div className="absolute inset-0 bg-[linear-gradient(to_right,#1A1A1A_1px,transparent_1px),linear-gradient(to_bottom,#1A1A1A_1px,transparent_1px)] bg-[size:1rem_1rem]" animate={{ backgroundPosition: ['0px 0px', '16px 16px'] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }}></motion.div>
-              </div>
-              
-              {/* Corner brackets */}
-              <div className="absolute top-8 left-8 w-8 h-8 border-t border-l border-[#C45E1A]"></div>
-              <div className="absolute top-8 right-8 w-8 h-8 border-t border-r border-[#C45E1A]"></div>
-              <div className="absolute bottom-8 left-8 w-8 h-8 border-b border-l border-[#C45E1A]"></div>
-              <div className="absolute bottom-8 right-8 w-8 h-8 border-b border-r border-[#C45E1A]"></div>
-              
-              {/* Center label */}
-              <div className="border border-[#C45E1A] bg-[#000000] px-6 py-3 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase relative z-10">
-                SCANNING_GLOBAL_NODES... [44%]
-              </div>
+            <div className="lg:col-span-2 border border-[#1A1A1A] bg-[#0A0A0A] h-[400px] relative overflow-hidden">
+              <NexusConstellationGraph />
             </div>
             
             <div className="lg:col-span-1 flex flex-col gap-8">
