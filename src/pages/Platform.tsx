@@ -79,7 +79,7 @@ export default function Platform() {
               transition={{ delay: 0.5, duration: 0.8 }}
             >
               <p className="font-mono text-[10px] tracking-[0.3em] text-[#ff5722] uppercase">
-                MRDN // PREVIEW ON SYNTHETIC DATA
+                MRDN // DEMO READY · BY APPOINTMENT
               </p>
               <div className="h-[1px] w-12 bg-[#ff5722]"></div>
             </motion.div>

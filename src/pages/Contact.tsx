@@ -67,7 +67,7 @@ export default function Contact() {
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="px-4 sm:p-8 max-w-2xl mx-auto pt-[80px] sm:pt-[120px] pb-24 min-h-screen">
       <header className="mb-12 border-b border-[#1A1A1A] pb-4">
         <h1 className="font-mono text-2xl text-[#FFFFFF] tracking-widest uppercase">Contact</h1>
-        <p className="text-[#7A7A7A] mt-2 font-sans text-sm">Mrdn is a preview on synthetic data, shown by appointment. Tell us about your operations and we'll book a demo. Or write to <a href="mailto:info@zaio.in?subject=Mrdn%20demo" className="text-[#FFFFFF] underline underline-offset-4 hover:text-[#C45E1A]">info@zaio.in</a>.</p>
+        <p className="text-[#7A7A7A] mt-2 font-sans text-sm">The Mrdn demo is ready and shown by appointment, on synthetic data. Tell us about your operations and we'll book it. For pricing, pilots or partnerships, <a href="mailto:info@zaio.in?subject=Mrdn%20-%20Contact%20sales" className="text-[#FFFFFF] underline underline-offset-4 hover:text-[#C45E1A]">contact sales</a> at info@zaio.in.</p>
       </header>
 
       <form className="space-y-6" onSubmit={handleSubmit}>

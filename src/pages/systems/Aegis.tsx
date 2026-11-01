@@ -161,7 +161,7 @@ export default function Aegis() {
             BOOK A DEMO
           </Link>
           <div className="font-mono text-[9px] text-[#7A7A7A] tracking-[0.1em] uppercase mt-6">
-            PREVIEW ON SYNTHETIC DATA · DEMO BY APPOINTMENT
+            DEMO READY · BY APPOINTMENT · SYNTHETIC DATA
           </div>
         </div>
 

@@ -11,11 +11,11 @@ export default function Footer() {
       </a>
       <div className="hidden md:flex gap-4">
         <span className="font-mono tracking-[0.05em] uppercase text-[10px] text-[#7A7A7A]">
-          Preview on synthetic data · Demo by appointment
+          Demo ready · by appointment · synthetic data
         </span>
       </div>
       <div className="font-mono tracking-[0.05em] uppercase text-[10px] text-[#C45E1A] whitespace-nowrap">
-        Mrdn Core · Preview
+        Mrdn Core · Demo ready
       </div>
     </footer>
   );

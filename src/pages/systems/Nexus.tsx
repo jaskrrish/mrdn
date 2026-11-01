@@ -150,7 +150,7 @@ export default function Nexus() {
               See it on your own operations.
             </h2>
             <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase mb-8">
-              PREVIEW ON SYNTHETIC DATA · DEMO BY APPOINTMENT
+              DEMO READY · BY APPOINTMENT · SYNTHETIC DATA
             </div>
             <Link to="/contact" className="bg-[#C45E1A] text-[#000000] font-mono text-[11px] tracking-[0.1em] uppercase px-8 py-4 hover:bg-[#A34A10] transition-colors">
               BOOK A DEMO
