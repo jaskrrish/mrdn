@@ -20,7 +20,7 @@ export default function Contact() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    if (!formData.useCase.trim()) newErrors.useCase = 'Use Case is required';
+    if (!formData.useCase.trim()) newErrors.useCase = 'Tell us a little about it';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -28,9 +28,9 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
-      const subject = encodeURIComponent(`MRDN Access Request — ${formData.name}`);
+      const subject = encodeURIComponent(`Mrdn demo: ${formData.name}`);
       const body = encodeURIComponent(
-        `Name: ${formData.name}\nOrganization: ${formData.organization}\nEmail: ${formData.email}\n\nUse Case:\n${formData.useCase}`
+        `Name: ${formData.name}\nOrganization: ${formData.organization}\nEmail: ${formData.email}\n\nWhat you want to see:\n${formData.useCase}`
       );
       window.location.href = `mailto:info@zaio.in?subject=${subject}&body=${body}`;
       setSubmitted(true);
@@ -50,8 +50,8 @@ export default function Contact() {
     return (
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="px-4 sm:p-8 max-w-2xl mx-auto pt-[80px] sm:pt-[120px] pb-24 min-h-screen flex flex-col items-center justify-center">
         <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-12 text-center w-full">
-          <h2 className="font-mono text-xl text-[#FFFFFF] tracking-widest uppercase mb-4">Request Received</h2>
-          <p className="text-[#7A7A7A] font-sans text-sm mb-8">DEPLOYMENT REQUEST RECEIVED. OUR ENGINEERING TEAM WILL REVIEW YOUR OPERATIONAL REQUIREMENTS.</p>
+          <h2 className="font-mono text-xl text-[#FFFFFF] tracking-widest uppercase mb-4">Your email is ready</h2>
+          <p className="text-[#7A7A7A] font-sans text-sm mb-8">Your email app has opened with your request to info@zaio.in. Send it and we'll reply to book a demo. If nothing opened, write to info@zaio.in directly.</p>
           <button 
             onClick={() => setSubmitted(false)}
             className="border border-[#1A1A1A] text-[#FFFFFF] font-mono text-[12px] tracking-widest uppercase px-6 py-3 hover:bg-[#1A1A1A] transition-colors cursor-pointer"
@@ -67,7 +67,7 @@ export default function Contact() {
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="px-4 sm:p-8 max-w-2xl mx-auto pt-[80px] sm:pt-[120px] pb-24 min-h-screen">
       <header className="mb-12 border-b border-[#1A1A1A] pb-4">
         <h1 className="font-mono text-2xl text-[#FFFFFF] tracking-widest uppercase">Contact</h1>
-        <p className="text-[#7A7A7A] mt-2 font-sans text-sm">MRDN is currently deploying in closed beta for government agencies and select enterprise design partners.</p>
+        <p className="text-[#7A7A7A] mt-2 font-sans text-sm">Mrdn is a preview on synthetic data, shown by appointment. Tell us about your operations and we'll book a demo. Or write to <a href="mailto:info@zaio.in?subject=Mrdn%20demo" className="text-[#FFFFFF] underline underline-offset-4 hover:text-[#C45E1A]">info@zaio.in</a>.</p>
       </header>
 
       <form className="space-y-6" onSubmit={handleSubmit}>
@@ -109,7 +109,7 @@ export default function Contact() {
         </div>
 
         <div className="space-y-2">
-          <label className="block font-mono text-[11px] text-[#7A7A7A] uppercase tracking-widest">Use Case</label>
+          <label className="block font-mono text-[11px] text-[#7A7A7A] uppercase tracking-widest">What you want to see</label>
           <textarea 
             rows={4} 
             name="useCase"
@@ -121,7 +121,7 @@ export default function Contact() {
         </div>
 
         <button type="submit" className="bg-[#FFFFFF] text-[#000000] font-mono text-[12px] tracking-widest uppercase px-6 py-3 hover:bg-[#C45E1A] hover:text-[#FFFFFF] transition-colors w-full cursor-pointer">
-          Submit Request
+          Request a demo
         </button>
       </form>
     </motion.div>

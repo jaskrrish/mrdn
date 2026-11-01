@@ -11,7 +11,7 @@ export default function Header() {
     { name: 'PLATFORM', path: '/' },
     { name: 'SYSTEMS', path: '/systems' },
     { name: 'MISSION', path: '/mission' },
-    { name: 'IDLY', path: 'https://idly.world', external: true },
+    { name: 'ZAIO', path: 'https://www.zaio.in/product', external: true },
     { name: 'CONTACT', path: '/contact' },
   ];
 
@@ -82,9 +82,12 @@ export default function Header() {
 
           {/* Desktop Access Button */}
           <div className="hidden lg:flex flex-none">
-            <button className="border border-[#1A1A1A] text-[#FFFFFF] px-6 py-2 font-sans text-[12px] font-semibold tracking-[0.05em] hover:bg-[#ff5722] hover:text-[#000000] hover:border-[#ff5722] transition-all duration-300 uppercase">
-              Access
-            </button>
+            <Link
+              to="/contact"
+              className="border border-[#1A1A1A] text-[#FFFFFF] px-6 py-2 font-sans text-[12px] font-semibold tracking-[0.05em] hover:bg-[#ff5722] hover:text-[#000000] hover:border-[#ff5722] transition-all duration-300 uppercase"
+            >
+              Book a demo
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -199,12 +202,13 @@ export default function Header() {
                 </div>
               ))}
               <div className="px-6 py-4">
-                <button
+                <Link
+                  to="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="border border-[#1A1A1A] text-[#FFFFFF] font-mono text-[12px] tracking-[0.05em] hover:bg-[#ff5722] hover:text-[#000000] hover:border-[#ff5722] transition-all uppercase w-full py-3"
+                  className="block text-center border border-[#1A1A1A] text-[#FFFFFF] font-mono text-[12px] tracking-[0.05em] hover:bg-[#ff5722] hover:text-[#000000] hover:border-[#ff5722] transition-all uppercase w-full py-3"
                 >
-                  Access
-                </button>
+                  Book a demo
+                </Link>
               </div>
             </div>
           </motion.div>

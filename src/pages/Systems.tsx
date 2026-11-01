@@ -20,16 +20,17 @@ export default function Systems() {
           <aside className="w-full lg:w-72 xl:w-80 flex flex-col gap-4 lg:gap-8 lg:shrink-0 relative lg:h-full lg:justify-center">
             <div className="flex flex-col gap-3 lg:gap-4">
               <span className="font-mono text-[10px] text-[#ff5722] tracking-[0.2em] uppercase">
-                Architecture v1.0
+                Architecture // Preview
               </span>
               <h1 className="text-3xl sm:text-4xl font-sans font-normal tracking-tight text-[#FFFFFF] leading-none">
                 SYSTEM<br className="hidden sm:block" />
                 <span className="sm:hidden"> </span>TOPOLOGY
               </h1>
               <p className="text-[#7A7A7A] font-sans text-sm leading-relaxed">
-                MRDN is a four-module intelligence stack. Each module performs a distinct function —
-                from autonomous data ingestion to multilingual AI — forming a unified operational
-                intelligence platform built for India's sovereign environments.
+                Mrdn is four parts that work as one. Orion reads a company's files, Nexus links
+                them into one picture of the business, agents watch it for trouble, and Aegis
+                answers questions in plain words. Helix, the defence track, is discussed in
+                closed-door meetings only.
               </p>
             </div>
 
@@ -39,7 +40,7 @@ export default function Systems() {
                   STRATEGY_01
                 </span>
                 <span className="font-mono text-sm text-[#FFFFFF] tracking-widest font-bold">
-                  FULL DATA SOVEREIGNTY
+                  RUNS ON YOUR OWN MACHINE
                 </span>
               </div>
               <div className="flex flex-col gap-1">
@@ -47,7 +48,7 @@ export default function Systems() {
                   STRATEGY_02
                 </span>
                 <span className="font-mono text-sm text-[#FFFFFF] tracking-widest font-bold">
-                  ZERO FOREIGN DEPENDENCY
+                  EVIDENCE BEHIND EVERY ANSWER
                 </span>
               </div>
               <div className="flex flex-col gap-1">
@@ -55,7 +56,7 @@ export default function Systems() {
                   STRATEGY_03
                 </span>
                 <span className="font-mono text-sm text-[#FFFFFF] tracking-widest font-bold">
-                  INDIA-NATIVE MODEL TRAINING
+                  A PERSON APPROVES EVERY ACTION
                 </span>
               </div>
             </div>
@@ -109,7 +110,7 @@ export default function Systems() {
             path: '/systems/orion',
             node: 'PLATFORM_01',
             name: 'ORION',
-            desc: 'Autonomous data ingestion engine. Replaces manual integration pipelines with agent-driven onboarding.',
+            desc: 'Reads spreadsheets, CSV, JSON, Tally exports, chats and letters as they are, and proposes how they link.',
             indicator: (
               <div className="mt-2 flex gap-1">
                 <div className="w-4 h-[1px] bg-[#ff5722]"></div>
@@ -121,7 +122,7 @@ export default function Systems() {
             path: '/systems/nexus',
             node: 'PLATFORM_02',
             name: 'NEXUS',
-            desc: 'Enterprise operational intelligence. Real-time graph across all departments, enriched with live market signals.',
+            desc: 'One linked picture of orders, plants, trucks, suppliers and stock. Agents flag what is at risk.',
             indicator: (
               <div className="mt-2 border border-[#1A1A1A] w-6 h-6 flex items-center justify-center">
                 <div className="w-2 h-2 border border-[#ff5722]"></div>
@@ -132,7 +133,7 @@ export default function Systems() {
             path: '/systems/helix',
             node: 'PLATFORM_03',
             name: 'HELIX',
-            desc: 'Government and defence intelligence. Connects 15, 20 Indian ministries into a unified threat graph.',
+            desc: 'The defence track. Discussed in closed-door meetings only.',
             indicator: (
               <div className="mt-2 grid grid-cols-4 gap-1 w-8">
                 <div className="w-1 h-1 bg-[#ff5722]"></div>
@@ -146,7 +147,7 @@ export default function Systems() {
             path: '/systems/aegis',
             node: 'PLATFORM_04',
             name: 'AEGIS',
-            desc: 'Multilingual AI layer. Natural-language interface across all Indian languages for every operator.',
+            desc: 'Ask in plain words. Every answer shows the rows it used, or says plainly that it can\'t answer.',
             indicator: (
               <div className="mt-2 flex flex-col gap-1 w-6">
                 <div className="h-[1px] w-full bg-[#ff5722]"></div>

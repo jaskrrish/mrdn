@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from "react";
 
 const NODES = [
   { id: "nexus",     label: "NEXUS_GRAPH",      sublabel: "CORE HUB",          x: 50,  y: 50,  size: 14, accent: true  },
-  { id: "erp",       label: "ERP_SYSTEM",        sublabel: "SAP / TALLY",       x: 22,  y: 22,  size: 9,  accent: false },
+  { id: "erp",       label: "ERP_SYSTEM",        sublabel: "TALLY / CSV",       x: 22,  y: 22,  size: 9,  accent: false },
   { id: "plant1",    label: "PLANT_01",          sublabel: "BATCH OPERATIONS",  x: 76,  y: 18,  size: 9,  accent: false },
-  { id: "plant2",    label: "PLANT_02",          sublabel: "KILN & PRODUCTION", x: 82,  y: 55,  size: 9,  accent: false },
-  { id: "transport", label: "FLEET_NETWORK",     sublabel: "GPS + TELEMATICS",  x: 65,  y: 82,  size: 9,  accent: false },
+  { id: "plant2",    label: "PLANT_02",          sublabel: "PRODUCTION RUNS", x: 82,  y: 55,  size: 9,  accent: false },
+  { id: "transport", label: "FLEET_NETWORK",     sublabel: "TRIP SHEETS",  x: 65,  y: 82,  size: 9,  accent: false },
   { id: "billing",   label: "BILLING_SYSTEM",    sublabel: "INVOICES & AR",     x: 30,  y: 80,  size: 9,  accent: false },
-  { id: "signals",   label: "EXTERNAL_SIGNALS",  sublabel: "NEWS / MARKET",     x: 14,  y: 52,  size: 9,  accent: false },
+  { id: "signals",   label: "EXTERNAL_SIGNALS",  sublabel: "LOCAL NEWS",     x: 14,  y: 52,  size: 9,  accent: false },
   { id: "supplier",  label: "SUPPLIER_NETWORK",  sublabel: "VENDORS & LOTS",    x: 20,  y: 68,  size: 7,  accent: false },
-  { id: "iot",       label: "IOT_SENSORS",       sublabel: "SCADA / PLANT",     x: 72,  y: 36,  size: 7,  accent: false },
+  { id: "iot",       label: "FIELD_REPORTS",     sublabel: "CHATS / LETTERS",     x: 72,  y: 36,  size: 7,  accent: false },
   { id: "orders",    label: "ORDER_PIPELINE",    sublabel: "SALES & DISPATCH",  x: 44,  y: 14,  size: 7,  accent: false },
 ];
 

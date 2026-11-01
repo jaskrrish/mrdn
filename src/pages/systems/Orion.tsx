@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import DemoShot from '../../components/DemoShot';
+import reviewShot from '../../assets/shots/mrdn-review.webp';
 
 export default function Orion() {
   return (
@@ -11,13 +13,13 @@ export default function Orion() {
           <div className="flex flex-col gap-8">
             <div>
               <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-4">
-                SYSTEM DESIGNATION // ORION-V1.0
+                SYSTEM DESIGNATION // ORION · PREVIEW
               </div>
               <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight mb-4 uppercase">
                 Orion
               </h1>
               <div className="font-mono text-xs text-[#7A7A7A] tracking-[0.1em] uppercase">
-                AUTONOMOUS DATA INGESTION ENGINE
+                READS YOUR FILES AS THEY ARE
               </div>
             </div>
             
@@ -35,25 +37,25 @@ export default function Orion() {
 
               <div className="flex flex-col gap-8">
                 <div className="border-2 border-[#C45E1A] px-5 py-5 font-mono text-[11px] text-[#C45E1A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
-                  CLIENT DATA HUBS
+                  YOUR FILES
                 </div>
               </div>
 
               <div className="flex flex-col gap-8">
                 <div className="border-2 border-[#C45E1A] px-5 py-5 font-mono text-[11px] text-[#C45E1A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
-                  DISCOVERY AGENT
+                  COLUMN PROFILER
                 </div>
                 <div className="border border-[#2A2A2A] px-5 py-5 font-mono text-[11px] text-[#7A7A7A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
-                  SCHEMA MAPPER
+                  LINK FINDER
                 </div>
               </div>
 
               <div className="flex flex-col gap-8">
                 <div className="border border-[#2A2A2A] px-5 py-5 font-mono text-[11px] text-[#7A7A7A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
-                  DATA CONNECTORS
+                  EVIDENCE
                 </div>
                 <div className="border-2 border-[#C45E1A] px-5 py-5 font-mono text-[11px] text-[#C45E1A] tracking-[0.12em] uppercase bg-[#0A0A0A] w-36 text-center leading-relaxed">
-                  QUALITY GATES
+                  YOUR REVIEW
                 </div>
               </div>
             </div>
@@ -67,16 +69,16 @@ export default function Orion() {
               01 // THE PROBLEM WE SOLVE
             </div>
             <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
-              Enterprise data onboarding is the single hardest problem in operational intelligence. Legacy deployment requires 6 to 8 months of manual integration work and teams of forward-deployed engineers on client premises. Orion eliminates this entirely. A hub of autonomous agents discovers, connects, extracts, and centralises client data — compressing months into weeks.
+              Getting a company's data into one place is usually the slowest part of any operations project. Orion starts from the files the company already has: spreadsheets, CSV, JSON, Tally exports, chat exports, letters, PDF and Word documents, messy Indian business data included.
             </p>
           </div>
           
           <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-8 flex justify-center items-center gap-8 h-32">
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">MESSY DATA</div>
+            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">MESSY FILES</div>
             <div className="text-[#333333]">→</div>
-            <div className="border border-[#C45E1A] px-4 py-2 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">DATA CONNECTORS</div>
+            <div className="border border-[#C45E1A] px-4 py-2 font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">ORION</div>
             <div className="text-[#333333]">→</div>
-            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">SOFTWARE</div>
+            <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase">ONE LINKED PICTURE</div>
           </div>
         </div>
 
@@ -88,11 +90,11 @@ export default function Orion() {
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {[
-              { step: '01', name: 'AGENT_DISCOVERY', active: false },
-              { step: '02', name: 'CONNECTOR_GENERATION', active: false },
-              { step: '03', name: '3-CONDITION_QUALITY_GATE', active: true },
-              { step: '04', name: 'CENTRALISED_PROCESSING', active: false },
-              { step: '05', name: 'GRAPH_FEED', active: false },
+              { step: '01', name: 'READ_FILES', active: false },
+              { step: '02', name: 'PROFILE_COLUMNS', active: false },
+              { step: '03', name: 'FIND_LINKS_WITH_EVIDENCE', active: false },
+              { step: '04', name: 'PERSON_CONFIRMS', active: true },
+              { step: '05', name: 'BUILD_THE_PICTURE', active: false },
             ].map((item, i) => (
               <div key={i} className={`pt-4 border-t ${item.active ? 'border-[#C45E1A]' : 'border-[#1A1A1A]'}`}>
                 <div className={`font-mono text-[10px] tracking-[0.1em] uppercase mb-2 ${item.active ? 'text-[#C45E1A]' : 'text-[#7A7A7A]'}`}>
@@ -130,22 +132,22 @@ export default function Orion() {
 
               {/* Spoke nodes */}
               <rect x="118" y="50" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
-              <text x="150" y="64" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">ERP_SYSTEM</text>
+              <text x="150" y="64" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">SPREADSHEET</text>
 
               <rect x="197" y="95" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
-              <text x="229" y="109" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">CRM_DATA</text>
+              <text x="229" y="109" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">TALLY_EXPORT</text>
 
               <rect x="197" y="185" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
-              <text x="229" y="199" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">SCADA_FEED</text>
+              <text x="229" y="199" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">CHAT_EXPORT</text>
 
               <rect x="118" y="230" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
-              <text x="150" y="244" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">SAP_CORE</text>
+              <text x="150" y="244" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">LETTERS_PDF</text>
 
               <rect x="39" y="185" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
-              <text x="71" y="199" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">FILE_STORE</text>
+              <text x="71" y="199" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">CSV_JSON</text>
 
               <rect x="39" y="95" width="64" height="20" fill="#0A0A0A" stroke="#2A2A2A" strokeWidth="1" />
-              <text x="71" y="109" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">API_LAYER</text>
+              <text x="71" y="109" textAnchor="middle" fill="#666666" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="1">WORD_DOC</text>
 
               {/* Active connection dots on spoke nodes */}
               <circle cx="119" cy="51" r="2.5" fill="#C45E1A" opacity="0.8" />
@@ -158,20 +160,20 @@ export default function Orion() {
               {/* Center hub node — drawn last to sit above all lines */}
               <rect x="114" y="132" width="72" height="36" fill="#0A0A0A" stroke="#C45E1A" strokeWidth="1.5" />
               <text x="150" y="147" textAnchor="middle" fill="#C45E1A" fontFamily="Courier New, monospace" fontSize="8" fontWeight="700" letterSpacing="2">ORION</text>
-              <text x="150" y="162" textAnchor="middle" fill="#C45E1A" fontFamily="Courier New, monospace" fontSize="8" fontWeight="700" letterSpacing="2">HUB</text>
+              <text x="150" y="162" textAnchor="middle" fill="#C45E1A" fontFamily="Courier New, monospace" fontSize="8" fontWeight="700" letterSpacing="2">READER</text>
 
               {/* Footer status */}
-              <text x="150" y="291" textAnchor="middle" fill="#333333" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="2">ACTIVE_CONNECTIONS: 6</text>
+              <text x="150" y="291" textAnchor="middle" fill="#333333" fontFamily="Courier New, monospace" fontSize="6" letterSpacing="2">SOURCES: FILES ON THIS MACHINE</text>
             </svg>
           </div>
 
           <div className="flex flex-col gap-8">
             <div>
               <div className="font-mono text-base md:text-xl text-[#C45E1A] tracking-[0.15em] uppercase mb-6 font-bold">
-                03 // HUB-AND-SPOKE ARCHITECTURE
+                03 // ONE READER, ANY FILE
               </div>
               <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF]">
-                A centralised Orion Hub is deployed on the client's private infrastructure or a dedicated MRDN-managed node. This hub maintains persistent, authenticated connections to all approved data sources across the organisation. Discovery agents run continuously — detecting schema changes, data drift, and pipeline failures — and auto-remediate without human intervention.
+                Orion runs on the machine where the files are. It reads each one, works out what every column holds (an id, a number, money, a date, a place, a category or free text), and finds which files describe the same things. In the demo build nothing is uploaded: it makes no internet request at all.
               </p>
             </div>
           </div>
@@ -187,23 +189,23 @@ export default function Orion() {
             {[
               {
                 id: '01',
-                title: 'AGENT-DRIVEN DISCOVERY',
-                desc: 'Agents scan databases, APIs, file systems, SaaS tools, and legacy ERPs — generating a complete, classified data inventory map without manual input.'
+                title: 'COLUMN PROFILING',
+                desc: 'Every column is read as an id, a number, money, a date, a place, a category or free text, so mixed-up exports still make sense.'
               },
               {
                 id: '02',
-                title: '3-CONDITION QUALITY GATE',
-                desc: 'Before any data enters the live graph, it must pass: (1) Schema Validity, (2) Completeness threshold, (3) Cross-source Consistency. All three conditions required. No exceptions.'
+                title: 'EVIDENCE FOR EVERY LINK',
+                desc: 'When two files describe the same things, Orion shows the matching values. Strong matches are kept; weaker ones wait for you to keep or drop.'
               },
               {
                 id: '03',
-                title: 'AUTOMATED SOP EXECUTION',
-                desc: 'Integration SOPs for every major data source type are codified and agent-executable. No reinvention per client — each deployment uses the same proven, battle-tested playbook.'
+                title: 'REMEMBERS YOUR CHOICES',
+                desc: 'Keep or drop a link once and Orion applies the same choice to the next file of the same shape.'
               },
               {
                 id: '04',
-                title: 'CONTINUOUS PIPELINE HEALTH',
-                desc: 'Post-deployment, Orion monitors every connector 24/7. Broken connections are auto-remediated. Schema changes trigger automatic connector updates.'
+                title: 'TESTED AT SCALE',
+                desc: '50,000 rows read and linked in about seven seconds on a laptop, in the demo build.'
               }
             ].map((attr) => (
               <div key={attr.id} className="border border-[#1A1A1A] bg-[#0A0A0A] p-8 flex flex-col gap-4">
@@ -224,37 +226,19 @@ export default function Orion() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.15em] uppercase mb-6">
-              05 // OUR UNFAIR ADVANTAGE
+              05 // A PERSON STAYS IN CHARGE
             </div>
             <div className="flex flex-col gap-5">
               <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
-                Traditional enterprise intelligence deployments are notoriously slow, labor-intensive, and cost-prohibitive. Legacy global competitors typically require 6 to 8 months of onboarding, alongside a dedicated team of 10 to 15 forward-deployed engineers embedded on-site just to wire up the infrastructure.
-              </p>
-              <p className="text-sm md:text-base leading-relaxed text-[#FFFFFF] max-w-md">
-                Orion fundamentally disrupts this model. By utilizing specialized autonomous agents to handle complex data integration and ontology mapping, Orion slashes deployment timelines down to just 1 to 2 weeks.
+                Orion proposes; your team confirms. Each kind of thing it found is listed with where it came from and how many records it holds, and every name can be changed before the picture is rebuilt.
               </p>
               <p className="text-sm md:text-base leading-relaxed text-[#7A7A7A] max-w-md">
-                The entire process requires only a single human checkpoint: final schema approval by your team.
+                The screen shown here is that review step in the demo build, on a fictional company's data.
               </p>
             </div>
           </div>
           
-          <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-8 flex items-center justify-center h-48 relative">
-            <div className="flex items-center gap-4">
-              <div className="flex flex-col gap-2">
-                <div className="w-8 h-[1px] bg-[#333333]"></div>
-                <div className="w-8 h-[1px] bg-[#C45E1A]"></div>
-                <div className="w-8 h-[1px] bg-[#333333]"></div>
-              </div>
-              <div className="border border-[#1A1A1A] w-8 h-8 flex items-center justify-center">
-                <div className="w-1 h-1 bg-[#FFFFFF]"></div>
-              </div>
-              <div className="flex flex-col gap-2">
-                <div className="w-8 h-[1px] bg-[#C45E1A]"></div>
-                <div className="w-8 h-[1px] bg-[#333333]"></div>
-              </div>
-            </div>
-          </div>
+          <DemoShot src={reviewShot} alt="Mrdn Core review step listing the kinds of things Orion found, on synthetic data" label="ORION // REVIEW STEP" />
         </div>
 
         {/* 06 // ECOSYSTEM INTEGRATION Section */}
@@ -277,24 +261,24 @@ export default function Orion() {
         {/* Footer Area */}
         <div className="border border-[#1A1A1A] bg-[#0A0A0A] p-16 flex flex-col items-center justify-center text-center mt-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#FFFFFF] mb-4 uppercase tracking-tight">
-            ORION MAKES THE MRDN STACK 4× FASTER TO DEPLOY.
+            ORION TURNS A FOLDER OF FILES INTO ONE LINKED PICTURE.
           </h2>
           <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase mb-8">
-            AGENT-DRIVEN ONBOARDING. HUMAN REVIEW AT ONE CHECKPOINT ONLY.
+            PREVIEW ON SYNTHETIC DATA · DEMO BY APPOINTMENT
           </div>
           <Link to="/contact" className="bg-[#C45E1A] text-[#000000] font-mono text-[11px] tracking-[0.1em] uppercase px-8 py-4 hover:bg-[#A34A10] transition-colors">
-            REQUEST ACCESS
+            BOOK A DEMO
           </Link>
         </div>
 
         <div className="flex justify-between items-center border-t border-[#1A1A1A] pt-6">
           <div className="font-mono text-[10px] text-[#C45E1A] tracking-[0.1em] uppercase">
-            © 2026 MRDN
+            © 2026 ZAIO PRIVATE LIMITED
           </div>
-          <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase flex gap-4">
-            <span>PRIVACY POLICY</span>
-            <span>TERMS OF SERVICE</span>
-            <span>SECURITY PROTOCOL</span>
+          <div className="font-mono text-[10px] text-[#7A7A7A] tracking-[0.1em] uppercase flex flex-wrap gap-4">
+            <a href="https://www.zaio.in/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFFFFF]">PRIVACY POLICY</a>
+            <a href="https://www.zaio.in/terms" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFFFFF]">TERMS OF USE</a>
+            <a href="https://www.zaio.in/trust" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFFFFF]">TRUST &amp; COMPLIANCE</a>
           </div>
         </div>
 

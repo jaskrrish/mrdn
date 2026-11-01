@@ -1,19 +1,12 @@
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useState, useEffect, useRef } from 'react';
-import { AreaChart, Area, XAxis, ReferenceLine, ResponsiveContainer, Tooltip } from 'recharts';
 
-const indiaDataGrowth = [
-  { year: '2005', users: 50 },
-  { year: '2008', users: 80 },
-  { year: '2010', users: 100 },
-  { year: '2013', users: 213 },
-  { year: '2015', users: 354 },
-  { year: '2017', users: 450 },
-  { year: '2019', users: 627 },
-  { year: '2021', users: 759 },
-  { year: '2023', users: 870 },
-  { year: '2025', users: 900 },
+// Facts from the Mrdn Core demo build (STATUS.md, 29 Oct 2026). Keep them true.
+const demoFacts = [
+  { k: 'SAMPLE COMPANY', v: '800 RECORDS · 2,181 LINKS' },
+  { k: 'SCALE TEST', v: '50,000 ROWS · ~7 S' },
+  { k: 'INTERNET NEEDED', v: 'NONE' },
 ];
 
 export default function Platform() {
@@ -86,7 +79,7 @@ export default function Platform() {
               transition={{ delay: 0.5, duration: 0.8 }}
             >
               <p className="font-mono text-[10px] tracking-[0.3em] text-[#ff5722] uppercase">
-                SYS-MRDN / v1.0 // SOVEREIGN BUILD
+                MRDN // PREVIEW ON SYNTHETIC DATA
               </p>
               <div className="h-[1px] w-12 bg-[#ff5722]"></div>
             </motion.div>
@@ -105,21 +98,21 @@ export default function Platform() {
               }
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              Sovereign Intelligence Infrastructure for India.
+              Bring any data. See how it connects.
             </motion.h1>
 
             <div className="relative mb-10">
               <p className="text-[#7A7A7A] font-sans text-sm sm:text-base md:text-lg leading-relaxed">
-                MRDN integrates fragmented data streams across government ministries and enterprise
-                operations into a unified intelligence graph — processed, structured, and acted upon
-                in real time, entirely within Indian borders.
+                Mrdn reads a company's own files (spreadsheets, Tally exports, chat exports and
+                letters) and builds one linked picture of its sites, trucks, suppliers, orders and
+                stock, with the evidence for every link.
               </p>
               <motion.p
                 style={{ opacity: isMobile ? 1 : paragraphOpacity }}
                 className="text-[#7A7A7A] font-sans text-sm sm:text-base md:text-lg leading-relaxed mt-2"
               >
-                From national security to commercial operations — MRDN delivers the decision clarity
-                that complex environments demand.
+                Ask in plain words and get the answer with the rows behind it. Agents flag what is
+                at risk and draft the fix. A person approves.
               </motion.p>
             </div>
 
@@ -129,12 +122,12 @@ export default function Platform() {
               animate={stage !== 'spin' ? { opacity: 1 } : { opacity: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              <button className="bg-[#ff5722] text-[#000000] px-5 sm:px-8 py-3 font-mono text-[11px] tracking-[0.15em] uppercase hover:bg-[#FFFFFF] transition-colors">
-                Request Access
-              </button>
-              <button className="border border-[#1A1A1A] text-[#FFFFFF] px-5 sm:px-8 py-3 font-mono text-[11px] tracking-[0.15em] uppercase hover:bg-[#0A0A0A] transition-colors">
-                View Platform
-              </button>
+              <Link to="/contact" className="bg-[#ff5722] text-[#000000] px-5 sm:px-8 py-3 font-mono text-[11px] tracking-[0.15em] uppercase hover:bg-[#FFFFFF] transition-colors">
+                Book a demo
+              </Link>
+              <Link to="/systems" className="border border-[#1A1A1A] text-[#FFFFFF] px-5 sm:px-8 py-3 font-mono text-[11px] tracking-[0.15em] uppercase hover:bg-[#0A0A0A] transition-colors">
+                How it works
+              </Link>
             </motion.div>
           </div>
         </section>
@@ -212,7 +205,7 @@ export default function Platform() {
                       transition={{ type: 'spring', stiffness: 70, damping: 10, duration: 1.2 }}
                     >
                       <div className="w-2.5 h-2.5 bg-[#ff5722]"></div>
-                      <span className="font-mono text-[11px] text-[#FFFFFF] tracking-[0.1em]">NOD-098 / ACTIVE</span>
+                      <span className="font-mono text-[11px] text-[#FFFFFF] tracking-[0.1em]">RUNS ON YOUR MACHINE</span>
                     </motion.div>
 
                     <motion.div
@@ -222,7 +215,7 @@ export default function Platform() {
                       transition={{ type: 'spring', stiffness: 70, damping: 10, duration: 1.2 }}
                     >
                       <div className="w-2.5 h-2.5 bg-[#FFFFFF]"></div>
-                      <span className="font-mono text-[11px] text-[#AAAAAA] tracking-[0.1em]">FLX-SYNC / 0.82ms</span>
+                      <span className="font-mono text-[11px] text-[#AAAAAA] tracking-[0.1em]">EVIDENCE PER LINK</span>
                     </motion.div>
                   </>
                 )}
@@ -249,8 +242,8 @@ export default function Platform() {
           {[
             { id: '01', name: 'ORION', sub: 'DATA INGESTION', path: '/systems/orion' },
             { id: '02', name: 'NEXUS', sub: 'ENTERPRISE OPS', path: '/systems/nexus' },
-            { id: '03', name: 'HELIX', sub: 'GOV INTELLIGENCE', path: '/systems/helix' },
-            { id: '04', name: 'AEGIS', sub: 'AI INTERFACE', path: '/systems/aegis' },
+            { id: '03', name: 'HELIX', sub: 'CLOSED-DOOR', path: '/systems/helix' },
+            { id: '04', name: 'AEGIS', sub: 'ASK IN PLAIN WORDS', path: '/systems/aegis' },
           ].map((item) => (
             <Link
               key={item.id}
@@ -270,56 +263,19 @@ export default function Platform() {
 
         <div className="hidden sm:flex w-56 md:w-80 lg:w-96 border-l border-[#1A1A1A] flex-col justify-center px-4 md:px-6 bg-[#080808] py-3 shrink-0 overflow-hidden gap-1">
           <div className="flex justify-between items-center">
-            <span className="font-mono text-[9px] text-[#FFFFFF] tracking-tighter uppercase font-semibold">
-              INDIA_CONNECTED_USERS
+            <span className="font-mono text-[9px] text-[#FFFFFF] tracking-[0.1em] uppercase font-semibold">
+              DEMO BUILD // TESTED
             </span>
-            <span className="font-mono text-[9px] text-[#7A7A7A] tracking-tighter uppercase">
-              2005–2025
-            </span>
-          </div>
-          <div className="h-14 sm:h-20 w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={indiaDataGrowth} margin={{ top: 4, right: 0, left: 0, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#ff5722" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#ff5722" stopOpacity={0} />
-                  </linearGradient>
-                </defs>
-                <XAxis dataKey="year" hide />
-                <Tooltip
-                  contentStyle={{
-                    background: '#0A0A0A',
-                    border: '1px solid #1A1A1A',
-                    borderRadius: 0,
-                    fontSize: 10,
-                    fontFamily: 'monospace',
-                    color: '#7A7A7A',
-                  }}
-                  itemStyle={{ color: '#ff5722' }}
-                  labelStyle={{ color: '#FFFFFF', fontSize: 10 }}
-                  cursor={{ stroke: '#ff5722' }}
-                  formatter={(value: number) => [`${value}M`, 'USERS']}
-                />
-                <Area
-                  type="monotone"
-                  dataKey="users"
-                  stroke="#ff5722"
-                  strokeWidth={2}
-                  fill="url(#areaGrad)"
-                  dot={false}
-                />
-              </AreaChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="font-mono text-[8px] text-[#ff5722] tracking-tighter uppercase font-semibold">
-              INTELLIGENCE EXTRACTED: ~0%
-            </span>
-            <span className="font-mono text-[8px] text-[#555555] tracking-tighter uppercase">
-              SOURCE: WORLD BANK / TRAI / ITU
+            <span className="font-mono text-[9px] text-[#7A7A7A] tracking-[0.1em] uppercase">
+              29 OCT 2026
             </span>
           </div>
+          {demoFacts.map((f) => (
+            <div key={f.k} className="flex justify-between items-center border-t border-[#1A1A1A] pt-1">
+              <span className="font-mono text-[9px] text-[#7A7A7A] tracking-[0.1em] uppercase">{f.k}</span>
+              <span className="font-mono text-[9px] text-[#ff5722] tracking-[0.1em] uppercase">{f.v}</span>
+            </div>
+          ))}
         </div>
       </motion.div>
     </div>
